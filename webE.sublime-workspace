@@ -1,0 +1,862 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"text",
+				"text-decoration\tproperty"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"pad",
+				"padding-right\tproperty"
+			],
+			[
+				"reel",
+				"reelDiv"
+			],
+			[
+				"df",
+				"df_region"
+			],
+			[
+				"av",
+				"avgSize"
+			],
+			[
+				"df_",
+				"df_subRegion"
+			],
+			[
+				"reg",
+				"region"
+			],
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"us",
+				"userList"
+			],
+			[
+				"te",
+				"text-decoration\tproperty"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"padding",
+				"padding-bottom\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"bg",
+				"bg_dark"
+			],
+			[
+				"join",
+				"join-ieee"
+			],
+			[
+				"diff",
+				"diff_bucket"
+			],
+			[
+				"d",
+				"diff_avg"
+			],
+			[
+				"con",
+				"continue"
+			],
+			[
+				"Re",
+				"RegionAvg"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"region",
+				"RegionAvg"
+			],
+			[
+				"fea",
+				"features_copy"
+			],
+			[
+				"s",
+				"subM"
+			],
+			[
+				"sub",
+				"subRegionAvg"
+			],
+			[
+				"su",
+				"subAvg"
+			],
+			[
+				"rem",
+				"remain_df"
+			],
+			[
+				"y_predict_",
+				"y_predict_Neg"
+			],
+			[
+				"y",
+				"y_predict"
+			],
+			[
+				"y_",
+				"y_predict"
+			],
+			[
+				"x_",
+				"x_train"
+			],
+			[
+				"A",
+				"accuracy"
+			],
+			[
+				"is",
+				"isRegion"
+			],
+			[
+				"dum",
+				"dummies"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"tra",
+				"train_test_split"
+			],
+			[
+				"in",
+				"inIt"
+			],
+			[
+				"quer",
+				"query2"
+			],
+			[
+				"que",
+				"query1"
+			],
+			[
+				"ite",
+				"item_df"
+			],
+			[
+				"x",
+				"x_test"
+			],
+			[
+				"it",
+				"itemList"
+			],
+			[
+				"hospi",
+				"hospital_df"
+			],
+			[
+				"get",
+				"getPointInRadius"
+			],
+			[
+				"clo",
+				"closest_node"
+			],
+			[
+				"ho",
+				"hospital_df"
+			],
+			[
+				"current",
+				"current_file"
+			],
+			[
+				"cl",
+				"closest_index"
+			],
+			[
+				"Lo",
+				"LotFrontage"
+			],
+			[
+				"Lot",
+				"LotArea"
+			],
+			[
+				"pr",
+				"prices"
+			],
+			[
+				"ge",
+				"get_Links"
+			],
+			[
+				"img",
+				"imgURL"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"cha",
+				"chainBroken"
+			],
+			[
+				"l",
+				"limit"
+			],
+			[
+				"ma",
+				"maping"
+			],
+			[
+				"ind",
+				"indices"
+			],
+			[
+				"so",
+				"sortedWords"
+			],
+			[
+				"di",
+				"digit"
+			],
+			[
+				"sq",
+				"sqRoot"
+			],
+			[
+				"r",
+				"rightBoundary"
+			],
+			[
+				"E",
+				"E2"
+			],
+			[
+				"p",
+				"pOfNotPicking"
+			],
+			[
+				"orig",
+				"originalArea"
+			],
+			[
+				"tri",
+				"triangle"
+			],
+			[
+				"o",
+				"pOfNotPicking"
+			],
+			[
+				"D",
+				"digSum"
+			],
+			[
+				"n",
+				"num"
+			],
+			[
+				"L",
+				"LIMIT_HIGH"
+			],
+			[
+				"LI",
+				"LIMIT_LOW"
+			],
+			[
+				"w",
+				"Winner"
+			],
+			[
+				"ha",
+				"hand2"
+			],
+			[
+				"h",
+				"hand2"
+			],
+			[
+				"sH",
+				"sHand2"
+			],
+			[
+				"c",
+				"cHand2"
+			],
+			[
+				"cH",
+				"cHand1"
+			],
+			[
+				"F",
+				"FullHouse"
+			],
+			[
+				"ch",
+				"cHand2"
+			],
+			[
+				"hand",
+				"hand1"
+			],
+			[
+				"Han",
+				"hand1"
+			],
+			[
+				"co",
+				"countDigit"
+			],
+			[
+				"ca",
+				"cache"
+			],
+			[
+				"de",
+				"denominator"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"isP",
+				"isPermutation"
+			],
+			[
+				"up",
+				"upperLimit"
+			],
+			[
+				"low",
+				"lowerLimit"
+			],
+			[
+				"mx",
+				"maxTotientRatio"
+			],
+			[
+				"tot",
+				"totientRatio"
+			],
+			[
+				"to",
+				"totientRatio"
+			],
+			[
+				"sum",
+				"sumDig"
+			],
+			[
+				"fra",
+				"Fraction"
+			],
+			[
+				"lar",
+				"large"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"Cube",
+				"Cubes"
+			],
+			[
+				"Cub",
+				"Cubes"
+			],
+			[
+				"True",
+				"true"
+			],
+			[
+				"T",
+				"Triangular"
+			],
+			[
+				"dec",
+				"decription"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"nu",
+				"numerator"
+			],
+			[
+				"fac",
+				"factorial"
+			],
+			[
+				"coun",
+				"countDigit"
+			],
+			[
+				"num",
+				"numOfPrime"
+			],
+			[
+				"sor",
+				"sortHand"
+			],
+			[
+				"pa",
+				"pattren"
+			],
+			[
+				"div",
+				"divide"
+			],
+			[
+				"file",
+				"fileSize"
+			],
+			[
+				"rec",
+				"recieveFile"
+			],
+			[
+				"gp",
+				"gpaS"
+			],
+			[
+				"t",
+				"tCh"
+			],
+			[
+				"B",
+				"B"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"na",
+				"namelist"
+			],
+			[
+				"send",
+				"send_to_all"
+			],
+			[
+				"msg",
+				"msgPart"
+			],
+			[
+				"sendS",
+				"sendSize"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"M",
+				"MAX_CONN"
+			],
+			[
+				"close",
+				"close_client"
+			],
+			[
+				"clien",
+				"clientSocket"
+			],
+			[
+				"avg",
+				"avgAgg"
+			],
+			[
+				"pre",
+				"predict_SemiToAgg"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"p",
+				"Build With: Python"
+			],
+			[
+				"pyt",
+				"Build With: Python"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			],
+			[
+				"\\",
+				"Snippet: Try/Except"
+			],
+			[
+				"",
+				"Build With: Python"
+			]
+		],
+		"width": 490.0
+	},
+	"console":
+	{
+		"height": 264.0,
+		"history":
+		[
+			"install SublimeHighlight",
+			"SublimeHighlight"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Projects/Knowldemort/.gitignore",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/D/Projects/Knowldemort/laravel/app/Http/Controllers/HelloController.php",
+		"/D/Projects/Knowldemort/laravel/routes/web.php",
+		"/C/xampp/htdocs/FICS20/includes/slider.php",
+		"/C/xampp/htdocs/FICS2020/includes/links.php",
+		"/C/xampp/htdocs/FICS2020/css/rs-style.css",
+		"/C/xampp/htdocs/FICS20/admin/control/admin.php",
+		"/C/xampp/htdocs/reg_ind.php",
+		"/C/xampp/htdocs/FICS20/register/student/ideas_by_industry.php",
+		"/C/xampp/htdocs/FICS2020/text.php",
+		"/D/Projects/Knowldemort/laravel/config/services.php",
+		"/C/xampp/htdocs/FICS20/index.php",
+		"/C/xampp/htdocs/form.php",
+		"/C/xampp/htdocs/FICS20/admin/student_ideas.php",
+		"/C/xampp/htdocs/FICS20/admin/login.php",
+		"/C/xampp/htdocs/FICS20/newIndex.php",
+		"/C/xampp/htdocs/FICS20/css/rs-style.css",
+		"/C/xampp/htdocs/FICS20/text.php",
+		"/C/xampp/htdocs/FICS20/phpmailer/PHPMailer_v5.1/docs/faq.html",
+		"/C/xampp/htdocs/FICS20/css/style.css",
+		"/C/xampp/htdocs/FICS20/includes/header.php",
+		"/C/xampp/htdocs/FICS20/includes/config.php",
+		"/C/xampp/htdocs/FICS20/includes/links.php",
+		"/C/xampp/htdocs/FICS20/includes/footer.php",
+		"/D/Soc/FICS20/text.php",
+		"/D/Soc/FICS20/text.html",
+		"/D/Soc/FICS20/index.php",
+		"/C/xampp/htdocs/FICS20/includes/top-banner.php",
+		"/C/xampp/htdocs/FICS20/index.htm",
+		"/C/xampp/htdocs/FICS20/includes/clients.php",
+		"/C/xampp/htdocs/FICS20/FAQs/index.php",
+		"/C/xampp/htdocs/FICS20/Contact-Us/index.php",
+		"/D/Book1.htm",
+		"/D/Soc/FICS20/Annex A CAC-304D-FICS 2020 LC List-5.1-16102019 (1).xlsx.html",
+		"/C/xampp/htdocs/FICS2020/contact.php",
+		"/C/xampp/htdocs/FICS2020/index.php",
+		"/C/xampp/htdocs/FICS2020/home.php",
+		"/C/xampp/htdocs/FICS2020/includes/top_bar.php",
+		"/C/xampp/htdocs/FICS2020/.htaccess",
+		"/C/xampp/htdocs/FICS2020/includes/config.php",
+		"/C/xampp/htdocs/FICS20/php.ini",
+		"/D/Soc/FICS20/404.php",
+		"/D/WE/lab5/task2.html",
+		"/D/WE/lab5/task22.html",
+		"/D/WE/lab5/style.css",
+		"/D/WE/lab5/task13.html",
+		"/D/WE/lab5/task12.html",
+		"/D/WE/lab5/task11.html",
+		"/D/WE/lab4/Abdul Hadi - 216606.html",
+		"/D/TUKL/UserRecommendation/alte_db.csv",
+		"/D/WE/lab4/sample.css",
+		"/D/WE/Lab2/main.html",
+		"/D/Projects/Size/run.py",
+		"/D/Projects/Size/data.csv",
+		"/D/Projects/Size/templates/user.html",
+		"/D/Projects/Size/templates/home.html",
+		"/D/Projects/Size/static/main.css",
+		"/D/Soc/IEEE/email.html",
+		"/D/TUKL/UserRecommendation/alte_db.txt",
+		"/D/Soc/IEEE/signature.html",
+		"/D/Soc/IEEE/signature_sans.html",
+		"/D/TUKL/data.py",
+		"/D/TUKL/sendModel.py",
+		"/D/TUKL/places.py",
+		"/D/TUKL/getOrigins.py",
+		"/D/Projects/faceIT/cascade.xml",
+		"/D/TUKL/model.py",
+		"/C/xampp/htdocs/o_site1/wp-config-sample.php",
+		"/D/TUKL/regions.py",
+		"/D/TUKL/testKreas.py",
+		"/D/TUKL/sendableModel.py",
+		"/D/TUKL/<frozen importlib._bootstrap>",
+		"/D/TUKL/m2.py",
+		"/C/Users/Star/Documents/Paradox Interactive/Crusader Kings II/save games/1159_01_24.ck2",
+		"/C/Users/Star/Documents/Paradox Interactive/Crusader Kings II/save games/Arabian_Empire1151_12_09.ck2",
+		"/D/TUKL/main.py",
+		"/D/TUKL/hosp.csv",
+		"/D/DAA/gpaCal/main.py",
+		"/D/DAA/gpaCal/model.py",
+		"/D/Projects/ProjectEuler/100 - Arranged probability.py",
+		"/D/Projects/ProjectEuler/101 - Optimum polynomial.py",
+		"/D/Projects/ProjectEuler/95 - Amicable chains.py",
+		"/D/Projects/ProjectEuler/21 - Amicable numbers.py",
+		"/D/Projects/ProjectEuler/[UW] 98 - Anagramic squares.py",
+		"/D/Projects/ProjectEuler/93 - Arithmetic expressions.py",
+		"/C/Program Files/Sublime Text 3/93 - Arithmetic expressions.py",
+		"/D/Projects/ProjectEuler/80 - Square root digital expansion.py",
+		"/D/Projects/ProjectEuler/[UW] 345 - Matrix Sum.py",
+		"/D/Projects/ProjectEuler/57 - Square root convergents.py",
+		"/D/Projects/ProjectEuler/112 - Bouncy Numbers.py",
+		"/D/Projects/ProjectEuler/[UW] 205 - Dice Game.py",
+		"/D/Projects/ProjectEuler/102 - Triangle containment.py",
+		"/D/Projects/ProjectEuler/85 - Counting rectangles.py",
+		"/D/Projects/ProjectEuler/493 - Under The Rainbow.py",
+		"/D/Projects/ProjectEuler/[UW] 650 - Divisors of Binomial Product.py",
+		"/D/Projects/ProjectEuler/[UW] 387 - Harshad Numbers.py",
+		"/D/Projects/ProjectEuler/357 - Prime generating integers.py",
+		"/D/Projects/ProjectEuler/99 - Largest exponential.py",
+		"/D/Projects/ProjectEuler/206 - Concealed Square.py",
+		"/D/Projects/ProjectEuler/[NW] 65 - Convergents of e.py",
+		"/D/Projects/ProjectEuler/[UW] 60- Prime pair set.py",
+		"/D/Projects/ProjectEuler/81 - Path sum two ways.py",
+		"/D/Projects/ProjectEuler/54 - Poker hands.py",
+		"/D/Projects/ProjectEuler/92 - Square digit chains.py",
+		"/D/Projects/ProjectEuler/79 - Passcode derivation.py",
+		"/D/Projects/ProjectEuler/97 - Large non-Mersenne prime.py",
+		"/D/Projects/ProjectEuler/72 - Counting fractions.py",
+		"/D/Projects/ProjectEuler/71 - Ordered fractions.py",
+		"/D/Projects/ProjectEuler/[UW] 78 - Coin partitions.py",
+		"/D/Projects/ProjectEuler/77 - Prime summations.py",
+		"/D/Projects/ProjectEuler/76 - Counting summations.py",
+		"/D/Projects/ProjectEuler/31 - Coins Sums.py",
+		"/D/Projects/ProjectEuler/[UW] 76 - Counting summations.py",
+		"/D/Projects/ProjectEuler/[OR] 75- Singular integer right triangles.py",
+		"/D/Projects/Euler Project/[OR] 75- Singular integer right triangles.py",
+		"/D/Projects/ProjectEuler/74 - Digit factorial chains.py",
+		"/D/Projects/ProjectEuler/[UW] 71 - Ordered fractions.py",
+		"/D/Projects/ProjectEuler/70- Totient permutation.py",
+		"/D/Projects/ProjectEuler/49 - Prime Permutations.py",
+		"/D/Projects/ProjectEuler/69 - Totient maximum.py",
+		"/D/Projects/ProjectEuler/files/t.txt",
+		"/D/Projects/ProjectEuler/[UW] 66- Diophantine equation.py",
+		"/D/Projects/ProjectEuler/64 - Odd period square roots.py",
+		"/D/Projects/ProjectEuler/62 - Cubic Permutations.py",
+		"/D/Projects/ProjectEuler/[UW] 64 - Odd period square roots.py",
+		"/D/Projects/ProjectEuler/63 - Powerful Digit counts.py",
+		"/D/Projects/ProjectEuler/61 - Cyclical Figurate numbers.py"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 197.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 134.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 175.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "webE.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"templates\\input.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 137.6,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"col"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
