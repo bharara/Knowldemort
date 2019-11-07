@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-right\tproperty"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"align",
+				"align-self\tproperty"
+			],
+			[
 				"mar",
 				"margin\tproperty"
 			],
@@ -12,16 +24,8 @@
 				"include"
 			],
 			[
-				"align",
-				"text-align\tproperty"
-			],
-			[
 				"text",
 				"text-decoration\tproperty"
-			],
-			[
-				"padd",
-				"padding-left\tproperty"
 			],
 			[
 				"pad",
@@ -510,15 +514,29 @@
 			[
 				"avg",
 				"avgAgg"
-			],
-			[
-				"pre",
-				"predict_SemiToAgg"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/xampp/htdocs/form.php",
+			"settings":
+			{
+				"buffer_size": 8633,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/reg_ind.php",
+			"settings":
+			{
+				"buffer_size": 2618,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -596,13 +614,38 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/Knowldemort",
+		"/C/xampp/htdocs/Knowldemort/css",
+		"/C/xampp/htdocs/Knowldemort/images",
+		"/C/xampp/htdocs/Knowldemort/includes",
+		"/C/xampp/htdocs/Knowldemort/js"
+	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/Knowldemort/index.php",
+		"/C/xampp/htdocs/Knowldemort/includes/must_includes.php",
+		"/C/xampp/htdocs/Knowldemort/css/head.css",
+		"/C/xampp/htdocs/Knowldemort/includes/log_out_menu.php",
+		"/C/xampp/htdocs/Knowldemort/js/menu.js",
+		"/C/xampp/htdocs/Knowldemort/css/responsive.css",
+		"/D/WE/Labs/lab4/style.css",
+		"/D/WE/Labs/lab4/Abdul Hadi - 216606.html",
+		"/C/xampp/htdocs/Knowldemort/js/slider.js",
+		"/C/xampp/htdocs/Knowldemort/includes/config.php",
+		"/C/xampp/htdocs/Knowldemort/include/log_out_slider.php",
+		"/C/xampp/htdocs/Knowldemort/include/config.php",
+		"/C/xampp/htdocs/FICS20/index_1.php",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/FICS20/includes/slider.php",
+		"/C/xampp/htdocs/FICS20/includes/banners.php",
+		"/C/xampp/htdocs/Knowldemort/.gitignore",
+		"/C/xampp/htdocs/FICS20/includes/config.php",
 		"/D/Projects/Knowldemort/.gitignore",
 		"/C/xampp/apache/conf/httpd.conf",
 		"/D/Projects/Knowldemort/laravel/app/Http/Controllers/HelloController.php",
 		"/D/Projects/Knowldemort/laravel/routes/web.php",
-		"/C/xampp/htdocs/FICS20/includes/slider.php",
 		"/C/xampp/htdocs/FICS2020/includes/links.php",
 		"/C/xampp/htdocs/FICS2020/css/rs-style.css",
 		"/C/xampp/htdocs/FICS20/admin/control/admin.php",
@@ -620,7 +663,6 @@
 		"/C/xampp/htdocs/FICS20/phpmailer/PHPMailer_v5.1/docs/faq.html",
 		"/C/xampp/htdocs/FICS20/css/style.css",
 		"/C/xampp/htdocs/FICS20/includes/header.php",
-		"/C/xampp/htdocs/FICS20/includes/config.php",
 		"/C/xampp/htdocs/FICS20/includes/links.php",
 		"/C/xampp/htdocs/FICS20/includes/footer.php",
 		"/D/Soc/FICS20/text.php",
@@ -709,33 +751,18 @@
 		"/D/Projects/ProjectEuler/71 - Ordered fractions.py",
 		"/D/Projects/ProjectEuler/[UW] 78 - Coin partitions.py",
 		"/D/Projects/ProjectEuler/77 - Prime summations.py",
-		"/D/Projects/ProjectEuler/76 - Counting summations.py",
-		"/D/Projects/ProjectEuler/31 - Coins Sums.py",
-		"/D/Projects/ProjectEuler/[UW] 76 - Counting summations.py",
-		"/D/Projects/ProjectEuler/[OR] 75- Singular integer right triangles.py",
-		"/D/Projects/Euler Project/[OR] 75- Singular integer right triangles.py",
-		"/D/Projects/ProjectEuler/74 - Digit factorial chains.py",
-		"/D/Projects/ProjectEuler/[UW] 71 - Ordered fractions.py",
-		"/D/Projects/ProjectEuler/70- Totient permutation.py",
-		"/D/Projects/ProjectEuler/49 - Prime Permutations.py",
-		"/D/Projects/ProjectEuler/69 - Totient maximum.py",
-		"/D/Projects/ProjectEuler/files/t.txt",
-		"/D/Projects/ProjectEuler/[UW] 66- Diophantine equation.py",
-		"/D/Projects/ProjectEuler/64 - Odd period square roots.py",
-		"/D/Projects/ProjectEuler/62 - Cubic Permutations.py",
-		"/D/Projects/ProjectEuler/[UW] 64 - Odd period square roots.py",
-		"/D/Projects/ProjectEuler/63 - Powerful Digit counts.py",
-		"/D/Projects/ProjectEuler/61 - Cyclical Figurate numbers.py"
+		"/D/Projects/ProjectEuler/76 - Counting summations.py"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 197.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -743,6 +770,16 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"webmaster",
+			"idea_detail",
+			"displayQuestion",
+			"words_required_slogan",
+			"show_detail",
+			"idea_question",
+			"interested",
+			"responsive.css",
+			"col-s",
+			"fade"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -750,6 +787,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"col"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -760,14 +798,74 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/form.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8580,
+								8580
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/xampp/htdocs/reg_ind.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2618,
+								2618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 834.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -808,7 +906,7 @@
 	"project": "webE.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
