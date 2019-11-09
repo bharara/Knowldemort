@@ -1,0 +1,109 @@
+        body{
+            background: linear-gradient(to bottom, purple, violet ) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+             background-size: cover;
+        }
+        .courses{
+            overflow: scroll;
+            box-sizing: border-box;
+            margin: 10px;
+            padding 50px;
+            border: solid black 2px;
+            height: auto;
+            width: auto;
+            text-align: center;
+            background: linear-gradient(to bottom, purple, violet, skyblue );
+
+        }
+        .projects{
+            overflow: scroll;
+            box-sizing: border-box;
+            margin: 10px;
+            padding 50px;
+            border: solid black 2px;
+            height: auto;
+            width: auto;
+            text-align: center;
+            background: linear-gradient(to bottom, purple, violet, skyblue );
+        }
+        .userinfo{
+            box-sizing: border-box;
+            margin: 10px;
+            padding 50px;
+            border: 10px solid transparent;
+            border-image-source: url("/Knowldemort/images/dark-purple-texture-1.png");
+
+            border-image-slice: 18;
+            height: auto;
+            width: auto;
+        }
+
+        .imguser-container{
+
+            margin: 10px;
+            padding 50px;
+            border: solid black 2px;
+            height: 300px;
+            width: 15%;
+            float: left;
+        }
+        .usrimage{
+            height: 100%;
+            width: 100%;
+        }
+        .info{
+            margin: 10px;
+            padding 50px;
+            border: 2px;
+            height: 300px;
+            width: 80%;
+            float: left;
+        }
+        h2{
+            font-size: 35px;
+            font-family: courier;
+            color: #88f0ff;
+        }
+
+        .clear {
+
+            clear: left;
+        }
+
+        .courseimage{
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+
+        }
+
+        .username{
+            font-family: courier;
+            font-size: 50px;
+            color: #88f0ff;
+            padding: 20px;
+        }
+
+        .subinfo{
+            font-family: courier;
+            font-size: 35px;
+            color: #88f0ff;
+            padding-right: 50px;
+            padding-left: 20px;
+            padding-top: 50px;
+            float: left;
+        }
+
+        .seemore{
+
+            padding 50px;
+            border: 2px solid transparent;
+            height: 25px;
+            width: 100%;
+            background-color: white;
+            color: blue;
+            font-size: 20px;
+        }
+
