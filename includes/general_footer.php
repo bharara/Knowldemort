@@ -14,3 +14,6 @@
 		</ul>
 	</div>
 </div>
+<?php
+	// CloseCon($conn);
+?>

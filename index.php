@@ -2,25 +2,24 @@
 <html>
 <head>
 <?php
-	include "includes/config.php";
-	include "includes/must_includes.php";
+	include "includes/header.php";
 ?>
 
-<title> Knowldemort - One Site to Learn it All </title>
+	<title>Knowldemort - One Site to Learn it All</title>
 </head>
-<body>
-
-	<div class="col-12">
-		<?php include "includes/log_out_slider.php" ?>
-		<?php include "includes/log_out_menu.php" ?>
-	</div>
+<body> 
 
 	<div style="min-height: 1000px">
+		<?php
+			if (isset($_GET["page"])) {
+				include 'logoutPages/' . $_GET["page"] . '.php';
+			}
+		?>
 	</div>
 
-	<div class="col-12">
+	<footer class="col-12">
 		<?php include "includes/general_footer.php" ?>
-	</div>
+	</footer>
 
 </body>
 </html>

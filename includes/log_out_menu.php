@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/head.css">
 
 <div class="topnav" id="myTopnav">
-  <a href="/">Home</a>
+  <a href="<?php echo $app_path ?>">Home</a>
   <a href="#contact">Contact</a>
   <div class="dropdown">
   <!--
@@ -17,8 +17,9 @@
   -->
   </div> 
   <a href="#about">About</a>
-  <a href="<?php echo $app_path ?>login">Log-In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
-  <a href="<?php echo $app_path ?>signup"/>Sign-Up <i class="fa fa-user-plus"></i></a>
+
+  <a href="index.php?page=login">Log-In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+  <a href="index.php?page=register"/>Sign-Up <i class="fa fa-user-plus"></i></a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="drop_down_menu()">&#9776;</a>
 </div>
 

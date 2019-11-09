@@ -1,0 +1,38 @@
+input[type=text], input[type=password], input[type=email], input[type=date] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+input[type=checkbox]{
+
+	width: 25px;
+	height: 25px;
+}
+
+input[type=submit]{
+	background-color : #8800ff;
+	border: 1px solid #8800ff;
+	padding: 15px;
+	width: auto;
+	margin: 20px;
+	font-family: courier;
+	font-size: 25px;
+}
+.form {
+	text-align: center;
+	overflow: auto;
+	font-size: 25px;
+	font-family: courier;
+	background: #8800ff;
+
+	width: 35%;
+	height: auto;
+	margin: auto;
+	border-radius: 25px ;
+	padding: 50px;
+}

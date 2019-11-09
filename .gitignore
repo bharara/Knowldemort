@@ -7,7 +7,7 @@ bootstrap/compiled.php
 app/storage/
 
 *.sublime-project
-*.sublime-workspace
+webE.sublime-workspace
 
 # Laravel 5 & Lumen specific
 public/storage

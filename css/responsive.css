@@ -12,21 +12,8 @@
   float: left;
   padding: 15px;
   margin: auto;
+  width: 100%;
 }
-
-/* For mobile phones: */
-.col-1 {width: 50%;}
-.col-2 {width: 50%;}
-.col-3 {width: 100%;}
-.col-4 {width: 100%;}
-.col-5 {width: 50%;}
-.col-6 {width: 50%;}
-.col-7 {width: 100%;}
-.col-8 {width: 100%;}
-.col-9 {width: 50%;}
-.col-10 {width: 50%;}
-.col-11 {width: 100%;}
-.col-12 {width: 100%;}
 
 @media only screen and (min-width: 768px) {
   /* For tablets: */
@@ -42,4 +29,10 @@
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  align-self: center;
 }
