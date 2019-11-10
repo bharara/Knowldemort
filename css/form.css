@@ -14,16 +14,22 @@ input[type=checkbox]{
 	height: 25px;
 }
 
-input[type=submit]{
-	background-color : #8800ff;
-	border: 1px solid #8800ff;
-	padding: 15px;
-	width: auto;
-	margin: 20px;
-	font-family: courier;
-	font-size: 25px;
+@media only screen and (max-width:768px) { 
+  form{width: 100%}
+} 
+
+button, input[type=submit]{
+  padding: 15px 30px;
+  font-size: 14px;
+  background: #0078ff;
+  border: 1px solid #8800ff;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 5px;
 }
-.form {
+
+
+form {
 	text-align: center;
 	overflow: auto;
 	font-size: 25px;
@@ -35,4 +41,19 @@ input[type=submit]{
 	margin: auto;
 	border-radius: 25px ;
 	padding: 50px;
+}
+
+form h1{
+  color: #fff;
+  font-size: 46px;
+}
+form p{
+  margin-top: 25px;
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+}
+
+form a {
+	color: white;
 }

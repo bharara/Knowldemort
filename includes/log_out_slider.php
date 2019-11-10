@@ -1,4 +1,6 @@
-
+<?php
+	include "config.php";
+?>
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/head.css">
 
 <div class="slideshow-container">

@@ -19,13 +19,14 @@ include "../includes/dbcode.php";
 				session_start();
 				
 				// Store data in session variables
-				$_SESSION["loggedin"] = true;
 				$_SESSION["sid"] = $sid;
 				$_SESSION["name"] = $name;
 				$_SESSION["email"] = $email;
 				$_SESSION["type"] = $type;
 
-				header("Location:../home");
+
+				$url = $url = 'http://localhost/Knowldemort/';
+				header("Location: $url");
 			}
 			else {
 				$message = "Incorrect Password";

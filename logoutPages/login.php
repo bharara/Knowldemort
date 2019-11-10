@@ -23,13 +23,11 @@
 			unset ($_GET["msg"]);
 		} ?></div>
 
-	<h3 align="center">Enter Login Details</h3>
-	Email:<br>
-	<input type="email" name="email">
-	<br>
-	Password:<br>
-	<input type="password" name="password">
+	<h1>Login</h1>
+	<input type="email" name="email" placeholder="Email"> <br>
+	<input type="password" name="password" placeholder="Password">
 	<br><br>
+
 	<input type="submit" name="submit" value="Submit">
 	<p>Don't have an account? <a href="index.php?page=register">Sign up now</a>.</p>
 </form>

@@ -38,16 +38,12 @@
 			unset ($_GET["msg"]);
 		} ?></div>
 
-	<h3 align="center">Register Here</h3>
-	Name:<br>
-	<input type="text" name="name">
-	Email:<br>
-	<input type="email" name="email">
-	<br>
-	Password:<br>
-	<input type="password" name="password">
-	Repeat Password:<br>
-	<input type="password" name="rpassword">
+	<h1>Register Here</h1>
+	<input type="text" name="name" placeholder="Name">
+	<input type="email" name="email" placeholder="name@example.com">
+	<input type="password" name="password" placeholder="Password">
+	<input type="password" name="rpassword" placeholder="Repeat Password">
 	<br><br>
 	<input type="submit" name="submit" value="Submit">
+	<p>Already Have an Account? <a href="index.php?page=login">Login Here</a>.</p>
 </form>

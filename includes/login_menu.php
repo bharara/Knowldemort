@@ -4,8 +4,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/head.css">
 
 <div class="topnav" id="myTopnav">
-  <a href="<?php echo $app_path ?>">Home</a>
-  <a href="index.php?page=contact">Contact</a>
+  <a href="<?php echo $app_path ?>dashboard">Home</a>
+  
   <div class="dropdown">
   <!--
     <button class="dropbtn">Dropdown 
@@ -17,11 +17,9 @@
       <a href="#">Link 3</a>
     </div>
   -->
-  </div> 
-  <a href="index.php?page=about">About</a>
+  </div> \
 
-  <a href="index.php?page=login">Log-In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
-  <a href="index.php?page=register"/>Sign-Up <i class="fa fa-user-plus"></i></a>
+  <a href="<?php echo $app_path ?>logoutPages/sign_out.php">Sign Out <i class="fa fa-sign-out"></i></a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="drop_down_menu()">&#9776;</a>
 </div>
 

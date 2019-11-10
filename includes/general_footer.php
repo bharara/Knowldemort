@@ -1,3 +1,6 @@
+<?php
+	include "config.php";
+?>
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/footer.css">
 
 <div class="footer">

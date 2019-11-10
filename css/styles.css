@@ -1,59 +1,5 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-body{
-  width: 100%;
-  height: 100vh;
-  background: #466368;
-  background: -webkit-linear-gradient(#8850ff, #8800ff);
-  background:    -moz-linear-gradient(#8850ff, #8800ff);
-  background:         linear-gradient(#8850ff, #8800ff);
-  font-family: Quicksand;
-}
-.header{
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.header h1{
-  color: #fff;
-  font-size: 46px;
-}
-.header p{
-  margin-top: 25px;
-  color: #fff;
-  font-size: 18px;
-}
-form{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 20px;
-  text-align: right;
 
-}
-input{
-  width: 100%;
-  margin: 20px 0px;
-  background: rgba(0,0,0,0);
-  border: none;
-  border-bottom: 1px solid blue;
-  color: #fff;
-  padding: 10px 0px;
-}
-button{
-  padding: 15px 30px;
-  font-size: 14px;
-  background: #0078ff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-}
+
 figcaption{
   padding: 15px 30px;
   font-size: 14px;
@@ -64,21 +10,7 @@ figcaption{
   text-align: center;
 }
 
-#msg{
-  margin-top: 50px;
-}
 
-::-webkit-input-placeholder{
-  color: #EAEAEA;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -89,25 +21,15 @@ figcaption{
   clear: both;
   display: table;
 }
+
 .column{
   flex:33.33%;
   padding: 0 4px;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 5px;
-  margin: auto;
-  width: 100%;
-}
 
-.about-section{
-  width: 100%;
-  background: #f1f1f1;
-  padding: 40px 0;
-  margin-top: 150px;
-}
 .inner-width{
   max-width: 1000px;
   overflow: hidden;
@@ -135,7 +57,7 @@ figcaption{
 }
 .about p{
   text-align: justify;
-  margin-bottom: 20px;
+  margin-bottoms: 20px;
 }
 .about a{
   display: inline-block;
@@ -183,29 +105,6 @@ figcaption{
   color: #fff;
   font-size: 12px;
 }
-
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:768px) { 
   .column{flex: 100%}
-  .about-section-col{
-    flex: 100%;
-    margin: 10px 0;
-  }
-  .about,.skills{
-    padding: 0;
-  }
-  .about{
-    text-align: center;
-  }
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
+} 
