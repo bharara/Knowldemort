@@ -23,6 +23,9 @@
 .userbox {
     border: 2px solid #8800ff;
     box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+    margin: 20px 0px;
+    box-shadow: 5px 10px #8850ff;
 }
 
 .userbox img {
@@ -46,7 +49,7 @@
     text-align: center;
     background: #8850ff;
     color: white;
-    padding: 20px;
+    padding: 5px 20px;
 }
 .userbox i {
     font-size: 18px;
