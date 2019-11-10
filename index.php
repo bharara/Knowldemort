@@ -16,6 +16,9 @@
 			if (isset($_GET["page"])) {
 				include 'logoutPages/' . $_GET["page"] . '.php';
 			}
+			else {
+				include 'includes/home.php';
+			}
 		?>
 	</div>
 
