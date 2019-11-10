@@ -17,8 +17,8 @@
 <body> 
 
 <div class="userbox col-12">
-    <div class="col-3">
-        <img class="usrimage" src="/Knowldemort/images/usimg.jpg">
+    <div class="col-3 usrimage">
+        <img src="/Knowldemort/images/usimg.jpg">
     </div>
     <div class="col-9">
         <h2> Itachi Uchiha</h2>
@@ -34,21 +34,21 @@
 
 <div class="userbox col-12">
     <h2>Courses</h2>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/c.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/android-logo.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/js.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/calc.jpeg"></div>
-    <button type=button class="seemore">See More <i class="fa fa-arrow-down"></i></button>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/c.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/android-logo.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/js.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/calc.jpeg"></div>
+    <button type=button class="center col-12">See More <i class="fa fa-arrow-down"></i></button>
     </div>
 </div>
 
 <div class="userbox col-12">
     <h2>Projects</h2>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/c.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/android-logo.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/js.png"></div>
-    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/calc.jpeg"></div>
-    <button type=button class="seemore">See More <i class="fa fa-arrow-down"></i></button>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/c.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/android-logo.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/js.png"></div>
+    <div class="col-3 courseimage"><img src="/Knowldemort/images/calc.jpeg"></div>
+    <button type=button class="center col-12">See More <i class="fa fa-arrow-down"></i></button>
     </div>
 </div>
 

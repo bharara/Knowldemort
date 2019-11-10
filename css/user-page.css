@@ -1,43 +1,20 @@
-
-.courses{
-    overflow: scroll;
-    margin: 10px;
-    padding 50px;
-    border: solid black 2px;
-    height: auto;
-    width: auto;
-    text-align: center;
-    background: linear-gradient(to bottom, purple, violet, skyblue );
-
-}
-.projects{
-    overflow: scroll;
-    margin: 10px;
-    padding 50px;
-    border: solid black 2px;
-    height: auto;
-    width: auto;
-    text-align: center;
-    background: linear-gradient(to bottom, purple, violet, skyblue );
-}
 .userbox {
     border: 2px solid #8800ff;
     box-sizing: border-box;
     padding: 0 10px 10px 10px;
     margin: 20px 0px;
-    box-shadow: 5px 10px #8850ff;
+    box-shadow: 5px 15px #8850ff;
 }
 
 .userbox img {
-    max-height: 300px;
-    max-width: 70%;
-    min-width: 50%;
-    width: auto;
+    max-height: 250px;
+    /*max-width: 70%;*/
+    /*min-width: 50%;*/
+    width: 50%;
     height: auto;
     align-self: center;
     margin: auto;
 }
-
 
 .userbox b {
     font-size: 18px;
@@ -58,22 +35,43 @@
     line-height: 30px;
 }
 
-
-
-.clear {
-
-    clear: left;
+.userbox p {
+    font-size: 15px;
 }
 
-.courseimage{
+.clear {clear: left;}
+
+.courseimage img {
     padding: 20px;
     max-height: 200px;
     max-width: 70%;
     min-width: 30%;
     width: auto;
     height: auto;
-    align-self: center;
-    margin: auto;
 }
 
+.courseimage, .usrimage {
+    text-align: center;
+}
 
+@media only screen and (max-width: 768px) {
+    .courseimage img{
+        /*max-height: 100px;*/
+        width: 30%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+.userbox i:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    border: 2px solid #8800ff;
+    box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+    margin: 20px 0px;
+    box-shadow: 5px 15px #8850ff;
+    min-height: 600px;
+}
