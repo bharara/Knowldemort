@@ -17,11 +17,11 @@
 </script>
 
 <form class="center form" name="loginForm" action="logoutPages/verify_login.php" method="post" onSubmit="return validate_log()" >
-	<div> <?php
+	<?php
 		if(isset($_GET["msg"])) {
-			echo $_GET["msg"];
+			echo "<p class=error>" . $_GET["msg"] . "</p>";
 			unset ($_GET["msg"]);
-		} ?></div>
+	}?>
 
 	<h1>Login</h1>
 	<input type="email" name="email" placeholder="Email"> <br>

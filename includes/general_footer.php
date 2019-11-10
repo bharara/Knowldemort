@@ -3,7 +3,7 @@
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/footer.css">
 
-<div class="footer">
+<div class="footer col-12">
 	<br>
 	<div class="col-6">
 		<p>Copyright &copy; 2020. All rights reserved. 

@@ -19,9 +19,8 @@
 		?>
 	</div>
 
-	<footer class="col-12">
-		<?php include "includes/general_footer.php" ?>
-	</footer>
+	
+	<?php include "includes/general_footer.php" ?>
 
 </body>
 </html>

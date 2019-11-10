@@ -17,8 +17,9 @@
       <a href="#">Link 3</a>
     </div>
   -->
-  </div> \
+  </div>
 
+  <a href="<?php echo $app_path ?>dashboard/user.php">My Profile <i class="fa fa-user"></i></a>
   <a href="<?php echo $app_path ?>logoutPages/sign_out.php">Sign Out <i class="fa fa-sign-out"></i></a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="drop_down_menu()">&#9776;</a>
 </div>

@@ -3,8 +3,7 @@
 .footer {
 	background-image: linear-gradient(to bottom right, #8800ff , #8850ff);
 	color: white;
-	min-height: 200px;
-	line-height: 30px;
+	text-align: center;
 }
 .footer a {
 	color: white;
@@ -12,4 +11,7 @@
 }
 .footer li {
 	list-style: none;
+	text-align: left;
+	padding: 2px;
+	font-size: 16px;
 }
