@@ -10,6 +10,7 @@
     }
 ?>
 <link rel="stylesheet" href="../css/user-page.css" >
+<link rel="stylesheet" href="../css/form.css" >
 
     <title><?php echo $_SESSION["name"]  ?>'s Profile - Knowldemort</title>
 </head>
@@ -31,24 +32,24 @@
     </div>
 </div>
 
-<div class="clear"></div>
-
-
-<div class="courses">
+<div class="userbox col-12">
     <h2>Courses</h2>
-    <img class="courseimage" src="/Knowldemort/images/c.png">
-    <img class="courseimage" src="/Knowldemort/images/android-logo.png">
-    <img class="courseimage" src="/Knowldemort/images/js.png">
-    <img class="courseimage" src="/Knowldemort/images/calc.jpeg">
-    <div class="seemore">See More >></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/c.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/android-logo.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/js.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/calc.jpeg"></div>
+    <button type=button class="seemore">See More <i class="fa fa-arrow-down"></i></button>
+    </div>
 </div>
-<div class="projects">
+
+<div class="userbox col-12">
     <h2>Projects</h2>
-    <img class="courseimage" src="/Knowldemort/images/c.png">
-    <img class="courseimage" src="/Knowldemort/images/android-logo.png">
-    <img class="courseimage" src="/Knowldemort/images/js.png">
-    <img class="courseimage" src="/Knowldemort/images/calc.jpeg">
-    <div class="seemore">See More >></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/c.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/android-logo.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/js.png"></div>
+    <div class="col-3"><img class="courseimage" src="/Knowldemort/images/calc.jpeg"></div>
+    <button type=button class="seemore">See More <i class="fa fa-arrow-down"></i></button>
+    </div>
 </div>
 
 

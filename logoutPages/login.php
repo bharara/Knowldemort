@@ -16,7 +16,8 @@
 	}
 </script>
 
-<form class="center form" name="loginForm" action="logoutPages/verify_login.php" method="post" onSubmit="return validate_log()" >
+<div class=col-4></div>
+<form class="center col-4" name="loginForm" action="logoutPages/verify_login.php" method="post" onSubmit="return validate_log()" >
 	<?php
 		if(isset($_GET["msg"])) {
 			echo "<p class=error>" . $_GET["msg"] . "</p>";

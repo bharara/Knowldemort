@@ -6,14 +6,14 @@
 <div class="footer col-12">
 	<br>
 	<div class="col-6">
-		<p>Copyright &copy; 2020. All rights reserved. 
+		<p>Copyright &copy; 2019. All rights reserved. 
 		</p>
 	</div>
 	<div class="col-6">
 		<ul>
 			<li><a href="<?php echo $app_path ?>">Home</a></li>
-			<li><a href="<?php echo $app_path ?>Contact-Us/">Contact Us</a></li>
-			<li><a href="<?php echo $app_path ?>About/">About</a></li>
+			<li><a href="<?php echo $app_path ?>index.php?page=contact">Contact Us</a></li>
+			<li><a href="<?php echo $app_path ?>index.php?page=about">About</a></li>
 		</ul>
 	</div>
 </div>

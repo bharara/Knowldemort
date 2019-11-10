@@ -1,7 +1,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/styles.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/form.css">
 
-<form class="center form headerContact" name="contactForm" method="post">
+<div class=col-4></div>
+<form class="center col-4 headerContact" name="contactForm" method="post">
 
 	<h1>Contact Us</h1>
 

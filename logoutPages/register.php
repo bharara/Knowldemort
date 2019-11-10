@@ -30,8 +30,8 @@
 		}
 	}
 </script>
-
-<form class="center form" name="registerForm" action="logoutPages/register_user.php" method="post" onSubmit="return validate_log()" >
+<div class=col-4></div>
+<form class="center col-4" name="registerForm" action="logoutPages/register_user.php" method="post" onSubmit="return validate_log()" >
 	 <?php
 		if(isset($_GET["msg"])) {
 			echo "<p class=error>" . $_GET["msg"] . "</p>";
