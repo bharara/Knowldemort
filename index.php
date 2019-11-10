@@ -4,7 +4,8 @@
 <?php
 	include "includes/header.php";
 	if(isset($_SESSION["sid"]))
-		header ("Location: dashboard");
+		$url = $app_path . "dashboard";
+		header ("Location: $url");
 ?>
 
 	<title>Knowldemort - One Site to Learn it All</title>

@@ -5,7 +5,7 @@
 
 <div class="slideshow-container">
   
-  <div class="mySlides fade"><a><img src="<?php echo $app_path ?>images/plc.jpg"/></a></div>
+  <div class="mySlides fade"><a><img src="<?php echo $app_path ?>images/logo.png"/></a></div>
   <div class="mySlides fade"><a><img src="<?php echo $app_path ?>images/plc.jpg"/></a></div>
   <div class="mySlides fade"><a><img src="<?php echo $app_path ?>images/plc.jpg"/></a></div>
 </div>

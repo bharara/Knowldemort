@@ -28,7 +28,7 @@
     color: white;
     padding: 5px 20px;
 }
-.userbox i {
+.userbox i, .sidebar i{
     font-size: 18px;
     font-style: normal;
     text-align: left;
@@ -63,7 +63,7 @@
     }
 }
 
-.userbox i:hover {
+.userbox i:hover, .sidebar i:hover {
     text-decoration: underline;
 }
 
@@ -72,6 +72,20 @@
     box-sizing: border-box;
     padding: 0 10px 10px 10px;
     margin: 20px 0px;
-    box-shadow: 5px 15px #8850ff;
+    /*box-shadow: 5px 15px #8850ff;*/
     min-height: 600px;
+    text-align: center;
+}
+
+.sidebar table {
+    font-size: 18px;
+    border: 2px solid #8850ff;
+    margin-bottom: 20px;
+}
+.sidebar th {
+    font-size: 24px;
+}
+.sidebar li {
+    text-align: left;
+    list-style-type: none;
 }
