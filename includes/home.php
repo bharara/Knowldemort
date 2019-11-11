@@ -41,12 +41,6 @@
 
 <script type="text/javascript" src="<?php echo $app_path ?>js/slideshow.js">></script>
 
-
-
-
-	
-
-
 <div class="row">
 	<div class="col-1"></div>
 	<div class="col-3 homeImg">

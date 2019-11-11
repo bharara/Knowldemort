@@ -32,7 +32,7 @@
           <div class="skill">
             <div class="title">UX Design</div>
             <div class="progress">
-              <div class="progress-bar p3"><span>50%</span></div>
+              <div class="progress-bar p3"><span>83%</span></div>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
     <figcaption>caption</figcaption>
   </div>
   <div class="column">
-    <img src="<?php echo $app_path ?>images/joker.jpg" alt="jk" style="width:100%">
+    <img src="<?php echo $app_path ?>images/Final-Fantasy-Cloud-HD-Wallpaper.jpg" alt="jk" style="width:100%">
     <figcaption>caption</figcaption>
   </div>
   <div class="column">
