@@ -3,10 +3,10 @@
 <head>
 <?php
 	include "includes/header.php";
-	if(isset($_SESSION["sid"]))
+	if(isset($_SESSION["sid"])) {
 		$url = $app_path . "dashboard";
 		header ("Location: $url");
-?>
+}?>
 
 	<title>Knowldemort - One Site to Learn it All</title>
 </head>

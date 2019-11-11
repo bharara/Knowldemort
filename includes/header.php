@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/user-page.css">
+
 
 
 	<div class="col-12">
