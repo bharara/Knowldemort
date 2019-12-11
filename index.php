@@ -12,7 +12,7 @@
 </head>
 <body> 
 
-	<div style="min-height: 700px">
+	<!-- <div style="min-height: 700px"> -->
 		<?php
 			if (isset($_GET["page"])) {
 				include 'logoutPages/' . $_GET["page"] . '.php';
@@ -21,10 +21,10 @@
 				include 'includes/home.php';
 			}
 		?>
-	</div>
+	<!-- </div> -->
 
 	
-	<?php include "includes/general_footer.php" ?>
+	<?php include "includes/footer.php" ?>
 
 </body>
 </html>

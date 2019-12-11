@@ -4,32 +4,88 @@
 		"selected_items":
 		[
 			[
-				"padd",
-				"padding-right\tproperty"
+				"text",
+				"text-decoration\tproperty"
 			],
 			[
-				"tex",
-				"text-align\tproperty"
+				"pad",
+				"padding-left\tproperty"
 			],
 			[
-				"align",
-				"align-self\tproperty"
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"hom",
+				"home2"
+			],
+			[
+				"lis",
+				"list-style-type\tproperty"
+			],
+			[
+				"a",
+				"auto\tmargin"
+			],
+			[
+				"col-",
+				"col-12"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
 			],
 			[
 				"mar",
 				"margin\tproperty"
 			],
 			[
+				"margi",
+				"margin-top\tproperty"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"fot",
+				"font-size\tproperty"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
 				"inc",
 				"include"
-			],
-			[
-				"text",
-				"text-decoration\tproperty"
-			],
-			[
-				"pad",
-				"padding-right\tproperty"
 			],
 			[
 				"reel",
@@ -52,10 +108,6 @@
 				"region"
 			],
 			[
-				"max",
-				"max-height\tproperty"
-			],
-			[
 				"us",
 				"userList"
 			],
@@ -66,10 +118,6 @@
 			[
 				"col",
 				"color\tproperty"
-			],
-			[
-				"back",
-				"background-color\tproperty"
 			],
 			[
 				"padding",
@@ -248,10 +296,6 @@
 				"limit"
 			],
 			[
-				"ma",
-				"maping"
-			],
-			[
 				"ind",
 				"indices"
 			],
@@ -400,10 +444,6 @@
 				"large"
 			],
 			[
-				"a",
-				"a"
-			],
-			[
 				"Cube",
 				"Cubes"
 			],
@@ -474,65 +514,34 @@
 			[
 				"B",
 				"B"
-			],
-			[
-				"g",
-				"g"
-			],
-			[
-				"na",
-				"namelist"
-			],
-			[
-				"send",
-				"send_to_all"
-			],
-			[
-				"msg",
-				"msgPart"
-			],
-			[
-				"sendS",
-				"sendSize"
-			],
-			[
-				"fil",
-				"filename"
-			],
-			[
-				"M",
-				"MAX_CONN"
-			],
-			[
-				"close",
-				"close_client"
-			],
-			[
-				"clien",
-				"clientSocket"
-			],
-			[
-				"avg",
-				"avgAgg"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/C/xampp/htdocs/form.php",
+			"file": "includes/log_out_menu.php",
 			"settings":
 			{
-				"buffer_size": 8633,
+				"buffer_size": 931,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/xampp/htdocs/reg_ind.php",
+			"file": "includes/header.php",
 			"settings":
 			{
-				"buffer_size": 2618,
+				"buffer_size": 613,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "includes/login_menu.php",
+			"settings":
+			{
+				"buffer_size": 1302,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -565,6 +574,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"in",
+				"Auto indent"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"int",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"p",
 				"Build With: Python"
@@ -618,18 +647,59 @@
 	[
 		"/C/xampp/htdocs/Knowldemort",
 		"/C/xampp/htdocs/Knowldemort/css",
-		"/C/xampp/htdocs/Knowldemort/images",
 		"/C/xampp/htdocs/Knowldemort/includes",
-		"/C/xampp/htdocs/Knowldemort/js"
+		"/C/xampp/htdocs/Knowldemort/js",
+		"/C/xampp/htdocs/Knowldemort/logoutPages"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/Knowldemort/index.php",
-		"/C/xampp/htdocs/Knowldemort/includes/must_includes.php",
+		"/C/xampp/htdocs/Knowldemort/css/form.css",
+		"/C/xampp/htdocs/Knowldemort/dashboard/courselist.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/verify_login.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/register_user.php",
+		"/C/xampp/htdocs/Knowldemort/css/styles.css",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/about.php",
+		"/C/xampp/htdocs/Knowldemort/css/user-page.css",
 		"/C/xampp/htdocs/Knowldemort/css/head.css",
-		"/C/xampp/htdocs/Knowldemort/includes/log_out_menu.php",
-		"/C/xampp/htdocs/Knowldemort/js/menu.js",
+		"/C/xampp/htdocs/Knowldemort/includes/login_menu.php",
+		"/C/xampp/htdocs/Knowldemort/includes/home.php",
+		"/C/xampp/htdocs/Knowldemort/index.php",
+		"/C/xampp/htdocs/Knowldemort/includes/header.php",
+		"/C/xampp/htdocs/Knowldemort/js/slideshow.js",
+		"/C/xampp/htdocs/Knowldemort/dashboard/index.php",
+		"/C/xampp/htdocs/Knowldemort/css/w3.css",
+		"/C/xampp/htdocs/Knowldemort/.htaccess",
+		"/C/xampp/htdocs/Knowldemort/includes/sidebar.php",
+		"/C/xampp/htdocs/Knowldemort/404.php",
+		"/C/xampp/htdocs/Knowldemort/includes/log_out_slider.php",
+		"/C/xampp/htdocs/Knowldemort/.gitignore",
+		"/C/xampp/htdocs/Knowldemort/dashboard/user.php",
 		"/C/xampp/htdocs/Knowldemort/css/responsive.css",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/contact.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/login.php",
+		"/C/xampp/htdocs/Knowldemort/css/footer.css",
+		"/C/xampp/htdocs/Knowldemort/includes/general_footer.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/register.php",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/phpMyAdmin/config.inc.php",
+		"/C/xampp/mysql/bin/my.ini",
+		"/C/xampp/htdocs/Knowldemort/css/signup.css",
+		"/C/xampp/htdocs/Knowldemort/dashbord/index.php",
+		"/C/xampp/htdocs/Knowldemort/dashbord/user.php",
+		"/C/xampp/htdocs/Knowldemort/includes/log_out_menu.php",
+		"/C/xampp/htdocs/Knowldemort/includes/user-page.html",
+		"/C/xampp/htdocs/Knowldemort/includes/about.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/sign_out.php",
+		"/C/xampp/htdocs/Knowldemort/includes/dbcode.php",
+		"/C/xampp/htdocs/Knowldemort/includes/homepage.html",
+		"/C/xampp/htdocs/Knowldemort/login/login.php",
+		"/C/xampp/htdocs/Knowldemort/login.php",
+		"/C/xampp/htdocs/Knowldemort/functions.php",
+		"/C/xampp/htdocs/Knowldemort/includes/must_includes.php",
+		"/C/xampp/htdocs/Knowldemort/includes/login.php",
+		"/C/xampp/htdocs/reg_ind.php",
+		"/C/xampp/htdocs/form.php",
+		"/C/xampp/htdocs/Knowldemort/js/menu.js",
 		"/D/WE/Labs/lab4/style.css",
 		"/D/WE/Labs/lab4/Abdul Hadi - 216606.html",
 		"/C/xampp/htdocs/Knowldemort/js/slider.js",
@@ -640,7 +710,6 @@
 		"/C/xampp/htdocs/index.php",
 		"/C/xampp/htdocs/FICS20/includes/slider.php",
 		"/C/xampp/htdocs/FICS20/includes/banners.php",
-		"/C/xampp/htdocs/Knowldemort/.gitignore",
 		"/C/xampp/htdocs/FICS20/includes/config.php",
 		"/D/Projects/Knowldemort/.gitignore",
 		"/C/xampp/apache/conf/httpd.conf",
@@ -649,12 +718,10 @@
 		"/C/xampp/htdocs/FICS2020/includes/links.php",
 		"/C/xampp/htdocs/FICS2020/css/rs-style.css",
 		"/C/xampp/htdocs/FICS20/admin/control/admin.php",
-		"/C/xampp/htdocs/reg_ind.php",
 		"/C/xampp/htdocs/FICS20/register/student/ideas_by_industry.php",
 		"/C/xampp/htdocs/FICS2020/text.php",
 		"/D/Projects/Knowldemort/laravel/config/services.php",
 		"/C/xampp/htdocs/FICS20/index.php",
-		"/C/xampp/htdocs/form.php",
 		"/C/xampp/htdocs/FICS20/admin/student_ideas.php",
 		"/C/xampp/htdocs/FICS20/admin/login.php",
 		"/C/xampp/htdocs/FICS20/newIndex.php",
@@ -713,49 +780,11 @@
 		"/D/TUKL/testKreas.py",
 		"/D/TUKL/sendableModel.py",
 		"/D/TUKL/<frozen importlib._bootstrap>",
-		"/D/TUKL/m2.py",
-		"/C/Users/Star/Documents/Paradox Interactive/Crusader Kings II/save games/1159_01_24.ck2",
-		"/C/Users/Star/Documents/Paradox Interactive/Crusader Kings II/save games/Arabian_Empire1151_12_09.ck2",
-		"/D/TUKL/main.py",
-		"/D/TUKL/hosp.csv",
-		"/D/DAA/gpaCal/main.py",
-		"/D/DAA/gpaCal/model.py",
-		"/D/Projects/ProjectEuler/100 - Arranged probability.py",
-		"/D/Projects/ProjectEuler/101 - Optimum polynomial.py",
-		"/D/Projects/ProjectEuler/95 - Amicable chains.py",
-		"/D/Projects/ProjectEuler/21 - Amicable numbers.py",
-		"/D/Projects/ProjectEuler/[UW] 98 - Anagramic squares.py",
-		"/D/Projects/ProjectEuler/93 - Arithmetic expressions.py",
-		"/C/Program Files/Sublime Text 3/93 - Arithmetic expressions.py",
-		"/D/Projects/ProjectEuler/80 - Square root digital expansion.py",
-		"/D/Projects/ProjectEuler/[UW] 345 - Matrix Sum.py",
-		"/D/Projects/ProjectEuler/57 - Square root convergents.py",
-		"/D/Projects/ProjectEuler/112 - Bouncy Numbers.py",
-		"/D/Projects/ProjectEuler/[UW] 205 - Dice Game.py",
-		"/D/Projects/ProjectEuler/102 - Triangle containment.py",
-		"/D/Projects/ProjectEuler/85 - Counting rectangles.py",
-		"/D/Projects/ProjectEuler/493 - Under The Rainbow.py",
-		"/D/Projects/ProjectEuler/[UW] 650 - Divisors of Binomial Product.py",
-		"/D/Projects/ProjectEuler/[UW] 387 - Harshad Numbers.py",
-		"/D/Projects/ProjectEuler/357 - Prime generating integers.py",
-		"/D/Projects/ProjectEuler/99 - Largest exponential.py",
-		"/D/Projects/ProjectEuler/206 - Concealed Square.py",
-		"/D/Projects/ProjectEuler/[NW] 65 - Convergents of e.py",
-		"/D/Projects/ProjectEuler/[UW] 60- Prime pair set.py",
-		"/D/Projects/ProjectEuler/81 - Path sum two ways.py",
-		"/D/Projects/ProjectEuler/54 - Poker hands.py",
-		"/D/Projects/ProjectEuler/92 - Square digit chains.py",
-		"/D/Projects/ProjectEuler/79 - Passcode derivation.py",
-		"/D/Projects/ProjectEuler/97 - Large non-Mersenne prime.py",
-		"/D/Projects/ProjectEuler/72 - Counting fractions.py",
-		"/D/Projects/ProjectEuler/71 - Ordered fractions.py",
-		"/D/Projects/ProjectEuler/[UW] 78 - Coin partitions.py",
-		"/D/Projects/ProjectEuler/77 - Prime summations.py",
-		"/D/Projects/ProjectEuler/76 - Counting summations.py"
+		"/D/TUKL/m2.py"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 40.8
 	},
 	"find_in_files":
 	{
@@ -770,6 +799,78 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"p3",
+			"column",
+			"w3.css",
+			"slideshowSlides",
+			"active",
+			"fade",
+			"mySlides",
+			"slideshow-container",
+			"mySlides",
+			"app_path",
+			"<li>",
+			"<i>",
+			"src=\"/images/",
+			"src=\"../images/",
+			"src=\"",
+			"<i>",
+			"</i>",
+			"usrimage",
+			"img",
+			"<img class=\"courseimage\"",
+			"<div class=\"col-3\"><img",
+			"<img class=\"courseimage\"",
+			"<div class=\"col-3",
+			"courseimage",
+			"userbox",
+			"allow_url_in",
+			"0900",
+			"password",
+			"3306",
+			"  box-sizing: border-box;",
+			"info",
+			"userinfo",
+			"<footer",
+			";\n",
+			"form",
+			"placeholder",
+			".form",
+			".header",
+			"header",
+			"column",
+			"<p",
+			"p",
+			"margin",
+			"padding",
+			"msg",
+			"contactUs",
+			"msg",
+			"about-section-col",
+			"column",
+			"col-12",
+			"dashbord",
+			"footer",
+			"foo",
+			"ffooter",
+			"margin-b",
+			"margin",
+			"col",
+			"allow_url_include",
+			"<h1> Hello </h1>",
+			"password_verify",
+			"mysqli_stmt_execute",
+			"database error",
+			"mysqli_stmt_bind_param",
+			"loginForm",
+			"index",
+			"password_verify",
+			"mysqli",
+			"validate_log",
+			"verify_login",
+			"return",
+			"validate_log",
+			"ajaxFunction",
 			"webmaster",
 			"idea_detail",
 			"displayQuestion",
@@ -787,6 +888,23 @@
 		"regex": false,
 		"replace_history":
 		[
+			"fadeSlide",
+			"slideshowSlides",
+			"<li><i>",
+			"<br><i>",
+			"src=\"<?php echo $app_path?>images/",
+			"src=\"<?php echo $app_path\"?>images/",
+			"src=\"<?php echo $app_path\".\"images/",
+			"src=\"/images/",
+			"src=\"../images/",
+			"</i><br>",
+			"<img",
+			"<div class=\"col-3 courseimage\"><img",
+			"<img",
+			"<div class=\"col-3 courseimage",
+			".headerContact",
+			"dashboard",
+			"registerForm",
 			"col"
 		],
 		"reverse": false,
@@ -798,54 +916,54 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/xampp/htdocs/form.php",
+					"file": "includes/log_out_menu.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8633,
+						"buffer_size": 931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8580,
-								8580
+								33,
+								151
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3858.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/xampp/htdocs/reg_ind.php",
+					"file": "includes/header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2618,
+						"buffer_size": 613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2618,
-								2618
+								365,
+								365
 							]
 						],
 						"settings":
@@ -854,7 +972,37 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 834.4,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "includes/login_menu.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								395,
+								395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -865,7 +1013,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 28.0
 	},
 	"input":
 	{

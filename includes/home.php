@@ -1,14 +1,220 @@
+<!--Banner-->
+<div class="bg-color">
+<div class="banner-text text-center">
+  <div class="text-border">
+    <h2 class="text-dec">One Site to Learn it All </h2>
+  </div>
+  <div class="intro-para text-center quote">
+    <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto<br>Laudantium enim repellat sapiente quos architecto</p>
+  </div>
+</div></div>
+<!--/ Banner-->
 
-<div class="col-12 center">
-	<h2> Knowldemort </h2>
-	<h3>One Site to Learn it All </h3>
+<!--work-shop-->
+<section id="work-shop" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2>Upcoming Workshop</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+      <hr class="bottom-line">
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="service-box text-center">
+        <div class="icon-box">
+          <i class="fa fa-html5 color-green"></i>
+        </div>
+        <div class="icon-text">
+          <h4 class="ser-text">Mentor HTML5 Workshop</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="service-box text-center">
+        <div class="icon-box">
+          <i class="fa fa-css3 color-green"></i>
+        </div>
+        <div class="icon-text">
+          <h4 class="ser-text">Mentor CSS3 Workshop</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="service-box text-center">
+        <div class="icon-box">
+          <i class="fa fa-joomla color-green"></i>
+        </div>
+        <div class="icon-text">
+          <h4 class="ser-text">Mentor Joomla Workshop</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--/ work-shop-->
+<!--Faculity member-->
+<section id="faculity-member" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2>Meet Our Faculty Member</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+      <hr class="bottom-line">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="images/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Bryan Johnson</p>
+          <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
-	<div class="col-3"></div>
-	<div class="col-6">
-		<p class="home">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="images/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Bryan Johnson</p>
+          <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
-	</div>
-	<div class="col-3"></div>
+          <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="images/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Bryan Johnson</p>
+          <p class="pm-staff-profile-title">Lead Software Engineer</p>
+
+          <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--/ Faculity member-->
+<!--Testimonial-->
+<section id="testimonial" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2 class="white">See What Our Customer Are Saying?</h2>
+      <p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+      <hr class="bottom-line bg-white">
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="text-comment">
+        <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
+        <p class="text-name">Abraham Doe - Creative Dırector</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="text-comment">
+        <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
+        <p class="text-name">Abraham Doe - Creative Dırector</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--/ Testimonial-->
+<!--Courses-->
+<section id="courses" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2>Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+      <hr class="bottom-line">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course01.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course02.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course03.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course04.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course05.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div class="col-md-4 col-sm-6 padleft-right">
+      <figure class="imghvr-fold-up">
+        <img src="images/course06.jpg" class="img-responsive">
+        <figcaption>
+          <h3>Course Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+  </div>
+</div>
+</section>
+<!--/ Courses-->
+
+<!-- <div class="col-12 center">
 
 	<div class="col-12">
 		<div class="slideshow-container">
@@ -59,4 +265,4 @@
 		<p>random.</p>
 	</div>
 	<div class="col-1"></div>
-</div>
+</div> -->

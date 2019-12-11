@@ -12,8 +12,7 @@
 
 	<div class="col-12">
 		<?php
-			include "$app_path". "includes/log_out_slider.php";
-			if(isset($_SESSION["name"]))
+			if(isset($_SESSION["sid"]))
 				include "$app_path" . "includes/login_menu.php";
 			else
 				include "$app_path" . "includes/log_out_menu.php";
