@@ -8,8 +8,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/responsive.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/user-page.css">
 
-
-
 	<div class="col-12">
 		<?php
 			if(isset($_SESSION["sid"]))
