@@ -15,34 +15,70 @@
 </head>
 <body> 
 
-	<div class="col-12">
-		<h1> Hello <?php echo $_SESSION["name"] ?>! Welcome to Knowldemort </h1>
-		<p> You have 6 new Notification </p>
-	</div>
+<!--Banner-->
+<div class="bg-color">
+<div class="banner-text text-center">
+  <div class="text-border">
+    <h2 class="text-dec"> Hello <?php echo $_SESSION["name"] ?>!<br> Welcome to Knowldemort</h2>
+  </div>
+  <div class="intro-para text-center quote">
+    <p class="small-text"> You have 6 new Notification</p>
+  </div>
+</div></div>
+<!--/ Banner-->
+
+<section id="faculity-member" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2>Events in Your University: </h2>
+      <hr class="bottom-line">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/c.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Buzz Night</p>
+          <p class="pm-staff-profile-bio">46 people are going</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/android-logo.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Science Bee</p>
+          <p class="pm-staff-profile-bio">410 people including 3 people who are enrolled with you are going</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/js.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Dev Fest</p>
+          <p class="pm-staff-profile-bio">Starting in Two Hours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 	<div class="col-12">
 		<div class="col-9">
-			<div class="userbox col-12">
-		    	<h2>Events in Your University: </h2>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/c.png">
-					<br><i>46 people are going</i><br>
-				</div>
-
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/android-logo.png">
-					<br><i>410 people including 3 people who are enrolled with you are going</i><br>
-				</div>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/js.png">
-					<br><i>Starting in 4 hours</i><br>
-				</div>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/calc.jpeg">
-					<br><i>Added by a club you are a member of</i><br>
-				</div>
-				<button type=button class="center col-12">See More <i class="fa fa-arrow-down"></i><br></button>
-		    </div>
 
 		    <div class="userbox col-12">
 		    	<h2>Content Added in Your Courses: </h2>
