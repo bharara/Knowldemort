@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2019 at 09:21 AM
+-- Generation Time: Dec 15, 2019 at 06:06 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -21,48 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `knowldemort`
 --
---
--- Table structure for table `courses`
---
-
-CREATE TABLE `courses` (
-  `cid` int(11) NOT NULL,
-  `coursename` varchar(255) NOT NULL,
-  `instructorname` varchar(255) NOT NULL,
-  `credithours` varchar(15) NOT NULL,
-  `coursimg` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`cid`, `coursename`, `instructorname`, `credithours`) VALUES
-(3433, 'java', 'hamer', '3+1', '\"/Knowldemort/images/js.png\"'),
-(22100, 'Javascript', 'Abdul Hadi', '2+1', '\"/Knowldemort/images/course01.jpg\"');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `enrolled`
---
-
-CREATE TABLE `enrolled` (
-  `courseid` int(11) NOT NULL,
-  `userid` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `enrolled`
---
-
-INSERT INTO `enrolled` (`courseid`, `userid`) VALUES
-(3433, 123),
-(22100, 123),
-(22100, 123),
-(22100, 123),
-(3433, 123);
-
 
 -- --------------------------------------------------------
 
@@ -86,11 +44,31 @@ INSERT INTO `course` (`course_tag`, `course_name`, `field`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `course_enroll`
+--
+
+CREATE TABLE `course_enroll` (
+  `course` int(11) NOT NULL,
+  `student` int(11) NOT NULL,
+  `enroll_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course_enroll`
+--
+
+INSERT INTO `course_enroll` (`course`, `student`, `enroll_id`) VALUES
+(1, 3, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `course_instance`
 --
 
 CREATE TABLE `course_instance` (
   `course` varchar(127) NOT NULL,
+  `credit_hour` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `degree` int(11) NOT NULL,
   `semester` int(11) NOT NULL,
@@ -103,8 +81,8 @@ CREATE TABLE `course_instance` (
 -- Dumping data for table `course_instance`
 --
 
-INSERT INTO `course_instance` (`course`, `year`, `degree`, `semester`, `instructor`, `pre_req`, `id`) VALUES
-('we', 2019, 1, 5, 1, NULL, 1);
+INSERT INTO `course_instance` (`course`, `credit_hour`, `year`, `degree`, `semester`, `instructor`, `pre_req`, `id`) VALUES
+('we', 3, 2019, 1, 5, 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -190,13 +168,9 @@ INSERT INTO `university` (`uni_tag`, `full_name`) VALUES
 CREATE TABLE `users` (
   `uid` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
-  `userimg` text NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `degree` varchar(255) NOT NULL,
-  `year` year(4) NOT NULL,
-  `uni` varchar(255) NOT NULL
+  `type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -204,8 +178,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`) VALUES
-(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', ''),
-(123, 'rabia', '\"/Knowldemort/images/usimg.jpg\"', 'r@gmail.com', '12345678', 'std', 'Bachelor\'s in Software Engineering', 2017, 'National University Of Sciences and Technology');
+(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', '');
 
 -- --------------------------------------------------------
 
@@ -216,9 +189,11 @@ INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`) VALUES
 CREATE TABLE `vw_course_display` (
 `course_id` int(11)
 ,`course_name` varchar(255)
+,`credit_hour` int(11)
 ,`year` int(11)
 ,`semester` int(11)
 ,`instructor` varchar(255)
+,`instructor_id` int(11)
 ,`degree` varchar(255)
 ,`uni` varchar(255)
 );
@@ -232,9 +207,11 @@ CREATE TABLE `vw_course_display` (
 CREATE TABLE `vw_course_display_pre` (
 `course_id` int(11)
 ,`course_name` varchar(255)
+,`credit_hour` int(11)
 ,`year` int(11)
 ,`semester` int(11)
 ,`instructor` varchar(255)
+,`instructor_id` int(11)
 ,`degree_tag` varchar(10)
 ,`uni_tag` varchar(10)
 ,`pre_req` varchar(127)
@@ -247,7 +224,7 @@ CREATE TABLE `vw_course_display_pre` (
 --
 DROP TABLE IF EXISTS `vw_course_display`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display`  AS  select `vw_course_display_pre`.`course_id` AS `course_id`,`vw_course_display_pre`.`course_name` AS `course_name`,`vw_course_display_pre`.`year` AS `year`,`vw_course_display_pre`.`semester` AS `semester`,`vw_course_display_pre`.`instructor` AS `instructor`,`degree`.`name` AS `degree`,`university`.`full_name` AS `uni` from ((`vw_course_display_pre` join `degree` on((`vw_course_display_pre`.`degree_tag` = `degree`.`degree_tag`))) join `university` on((`vw_course_display_pre`.`uni_tag` = `university`.`uni_tag`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display`  AS  select `vw_course_display_pre`.`course_id` AS `course_id`,`vw_course_display_pre`.`course_name` AS `course_name`,`vw_course_display_pre`.`credit_hour` AS `credit_hour`,`vw_course_display_pre`.`year` AS `year`,`vw_course_display_pre`.`semester` AS `semester`,`vw_course_display_pre`.`instructor` AS `instructor`,`vw_course_display_pre`.`instructor_id` AS `instructor_id`,`degree`.`name` AS `degree`,`university`.`full_name` AS `uni` from ((`vw_course_display_pre` join `degree` on((`vw_course_display_pre`.`degree_tag` = `degree`.`degree_tag`))) join `university` on((`vw_course_display_pre`.`uni_tag` = `university`.`uni_tag`))) ;
 
 -- --------------------------------------------------------
 
@@ -256,7 +233,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_course_display_pre`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display_pre`  AS  select `course_instance`.`id` AS `course_id`,`course`.`course_name` AS `course_name`,`course_instance`.`year` AS `year`,`course_instance`.`semester` AS `semester`,`instructor`.`name` AS `instructor`,`degree_uni`.`degree` AS `degree_tag`,`degree_uni`.`uni` AS `uni_tag`,`course_instance`.`pre_req` AS `pre_req` from (((`course_instance` join `course` on((`course_instance`.`course` = `course`.`course_tag`))) join `instructor` on((`course_instance`.`instructor` = `instructor`.`id`))) join `degree_uni` on((`course_instance`.`degree` = `degree_uni`.`id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display_pre`  AS  select `course_instance`.`id` AS `course_id`,`course`.`course_name` AS `course_name`,`course_instance`.`credit_hour` AS `credit_hour`,`course_instance`.`year` AS `year`,`course_instance`.`semester` AS `semester`,`instructor`.`name` AS `instructor`,`instructor`.`id` AS `instructor_id`,`degree_uni`.`degree` AS `degree_tag`,`degree_uni`.`uni` AS `uni_tag`,`course_instance`.`pre_req` AS `pre_req` from (((`course_instance` join `course` on((`course_instance`.`course` = `course`.`course_tag`))) join `instructor` on((`course_instance`.`instructor` = `instructor`.`id`))) join `degree_uni` on((`course_instance`.`degree` = `degree_uni`.`id`))) ;
 
 --
 -- Indexes for dumped tables
@@ -267,6 +244,14 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 ALTER TABLE `course`
   ADD PRIMARY KEY (`course_tag`);
+
+--
+-- Indexes for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  ADD PRIMARY KEY (`enroll_id`),
+  ADD KEY `course` (`course`),
+  ADD KEY `student` (`student`);
 
 --
 -- Indexes for table `course_instance`
@@ -315,6 +300,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `course_instance`
 --
 ALTER TABLE `course_instance`
@@ -341,6 +332,13 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  ADD CONSTRAINT `course_enroll_ibfk_1` FOREIGN KEY (`course`) REFERENCES `course_instance` (`id`),
+  ADD CONSTRAINT `course_enroll_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`uid`);
 
 --
 -- Constraints for table `course_instance`
