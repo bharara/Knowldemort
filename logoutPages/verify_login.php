@@ -23,6 +23,7 @@ include "../includes/dbcode.php";
 				$_SESSION["name"] = $name;
 				$_SESSION["email"] = $email;
 				$_SESSION["type"] = $type;
+				$_SESSION["img"] = "3.jpg";
 
 
 				$url = $url = 'http://localhost/Knowldemort/';

@@ -4,8 +4,20 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"course_name"
+			],
+			[
+				"cour",
+				"course_info"
+			],
+			[
+				"cou",
+				"course_id"
+			],
+			[
 				"text",
-				"text-decoration\tproperty"
+				"text-dec"
 			],
 			[
 				"pad",
@@ -392,10 +404,6 @@
 				"hand1"
 			],
 			[
-				"co",
-				"countDigit"
-			],
-			[
 				"ca",
 				"cache"
 			],
@@ -506,43 +514,15 @@
 			[
 				"gp",
 				"gpaS"
-			],
-			[
-				"t",
-				"tCh"
-			],
-			[
-				"B",
-				"B"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "includes/log_out_menu.php",
 			"settings":
 			{
-				"buffer_size": 931,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "includes/header.php",
-			"settings":
-			{
-				"buffer_size": 613,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "includes/login_menu.php",
-			"settings":
-			{
-				"buffer_size": 1302,
-				"encoding": "UTF-8",
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -646,27 +626,44 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/Knowldemort",
-		"/C/xampp/htdocs/Knowldemort/css",
+		"/C/xampp/htdocs/Knowldemort/dashboard",
 		"/C/xampp/htdocs/Knowldemort/includes",
-		"/C/xampp/htdocs/Knowldemort/js",
-		"/C/xampp/htdocs/Knowldemort/logoutPages"
+		"/C/xampp/htdocs/Knowldemort/logoutPages",
+		"/D/WE/Project/Mentor"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/Knowldemort/includes/dbfun.php",
+		"/C/xampp/htdocs/Knowldemort/dashboard/course.php",
+		"/C/xampp/htdocs/Knowldemort/dashboard/course_1.php",
+		"/C/xampp/htdocs/Knowldemort/includes/dbcode.php",
+		"/C/xampp/htdocs/Knowldemort/includes/home.php",
+		"/C/xampp/htdocs/Knowldemort/dashboard/index.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/verify_login.php",
+		"/C/xampp/htdocs/Knowldemort/includes/login_menu.php",
+		"/C/xampp/htdocs/Knowldemort/includes/header.php",
+		"/C/xampp/htdocs/Knowldemort/css/style.css",
+		"/C/xampp/htdocs/Knowldemort/includes/footer.php",
+		"/D/WE/Labs/lab11/edit.php",
+		"/D/WE/Labs/lab11/task3.php",
+		"/C/xampp/htdocs/Knowldemort/includes/log_out_menu.php",
+		"/D/WE/Project/Mentor/index.html",
+		"/C/xampp/htdocs/Knowldemort/css/imagehover.min.css",
+		"/C/xampp/htdocs/Knowldemort/includes/general_footer.php",
+		"/C/xampp/htdocs/Knowldemort/js/contactform.js",
+		"/C/xampp/htdocs/Knowldemort/includes/config.php",
+		"/C/xampp/htdocs/Knowldemort/index.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/login.php",
+		"/C/xampp/htdocs/Knowldemort/logoutPages/login_user.php",
+		"/C/Users/Star/AppData/Roaming/Sublime Text 3/Packages/UnusedCssFinder/UnusedCssFinder.sublime-settings",
 		"/C/xampp/htdocs/Knowldemort/css/form.css",
 		"/C/xampp/htdocs/Knowldemort/dashboard/courselist.php",
-		"/C/xampp/htdocs/Knowldemort/logoutPages/verify_login.php",
 		"/C/xampp/htdocs/Knowldemort/logoutPages/register_user.php",
 		"/C/xampp/htdocs/Knowldemort/css/styles.css",
 		"/C/xampp/htdocs/Knowldemort/logoutPages/about.php",
 		"/C/xampp/htdocs/Knowldemort/css/user-page.css",
 		"/C/xampp/htdocs/Knowldemort/css/head.css",
-		"/C/xampp/htdocs/Knowldemort/includes/login_menu.php",
-		"/C/xampp/htdocs/Knowldemort/includes/home.php",
-		"/C/xampp/htdocs/Knowldemort/index.php",
-		"/C/xampp/htdocs/Knowldemort/includes/header.php",
 		"/C/xampp/htdocs/Knowldemort/js/slideshow.js",
-		"/C/xampp/htdocs/Knowldemort/dashboard/index.php",
 		"/C/xampp/htdocs/Knowldemort/css/w3.css",
 		"/C/xampp/htdocs/Knowldemort/.htaccess",
 		"/C/xampp/htdocs/Knowldemort/includes/sidebar.php",
@@ -676,9 +673,7 @@
 		"/C/xampp/htdocs/Knowldemort/dashboard/user.php",
 		"/C/xampp/htdocs/Knowldemort/css/responsive.css",
 		"/C/xampp/htdocs/Knowldemort/logoutPages/contact.php",
-		"/C/xampp/htdocs/Knowldemort/logoutPages/login.php",
 		"/C/xampp/htdocs/Knowldemort/css/footer.css",
-		"/C/xampp/htdocs/Knowldemort/includes/general_footer.php",
 		"/C/xampp/htdocs/Knowldemort/logoutPages/register.php",
 		"/C/xampp/php/php.ini",
 		"/C/xampp/phpMyAdmin/config.inc.php",
@@ -686,11 +681,9 @@
 		"/C/xampp/htdocs/Knowldemort/css/signup.css",
 		"/C/xampp/htdocs/Knowldemort/dashbord/index.php",
 		"/C/xampp/htdocs/Knowldemort/dashbord/user.php",
-		"/C/xampp/htdocs/Knowldemort/includes/log_out_menu.php",
 		"/C/xampp/htdocs/Knowldemort/includes/user-page.html",
 		"/C/xampp/htdocs/Knowldemort/includes/about.php",
 		"/C/xampp/htdocs/Knowldemort/logoutPages/sign_out.php",
-		"/C/xampp/htdocs/Knowldemort/includes/dbcode.php",
 		"/C/xampp/htdocs/Knowldemort/includes/homepage.html",
 		"/C/xampp/htdocs/Knowldemort/login/login.php",
 		"/C/xampp/htdocs/Knowldemort/login.php",
@@ -703,7 +696,6 @@
 		"/D/WE/Labs/lab4/style.css",
 		"/D/WE/Labs/lab4/Abdul Hadi - 216606.html",
 		"/C/xampp/htdocs/Knowldemort/js/slider.js",
-		"/C/xampp/htdocs/Knowldemort/includes/config.php",
 		"/C/xampp/htdocs/Knowldemort/include/log_out_slider.php",
 		"/C/xampp/htdocs/Knowldemort/include/config.php",
 		"/C/xampp/htdocs/FICS20/index_1.php",
@@ -768,19 +760,7 @@
 		"/D/Soc/IEEE/email.html",
 		"/D/TUKL/UserRecommendation/alte_db.txt",
 		"/D/Soc/IEEE/signature.html",
-		"/D/Soc/IEEE/signature_sans.html",
-		"/D/TUKL/data.py",
-		"/D/TUKL/sendModel.py",
-		"/D/TUKL/places.py",
-		"/D/TUKL/getOrigins.py",
-		"/D/Projects/faceIT/cascade.xml",
-		"/D/TUKL/model.py",
-		"/C/xampp/htdocs/o_site1/wp-config-sample.php",
-		"/D/TUKL/regions.py",
-		"/D/TUKL/testKreas.py",
-		"/D/TUKL/sendableModel.py",
-		"/D/TUKL/<frozen importlib._bootstrap>",
-		"/D/TUKL/m2.py"
+		"/D/Soc/IEEE/signature_sans.html"
 	],
 	"find":
 	{
@@ -799,6 +779,23 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"id",
+			"responsive.css",
+			"<div class=\"col-12\">",
+			"log_out_menu",
+			"imghvr",
+			"imghvr {",
+			"../images/",
+			"img/",
+			"img",
+			"image/",
+			"text-border",
+			"image/",
+			"img/",
+			"img",
+			"bg",
+			"img/",
+			"img",
 			"p3",
 			"column",
 			"w3.css",
@@ -888,6 +885,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"images/",
+			"../images/",
 			"fadeSlide",
 			"slideshowSlides",
 			"<li><i>",
@@ -916,90 +915,28 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "includes/log_out_menu.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 931,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33,
-								151
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "includes/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 613,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								365,
-								365
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "includes/login_menu.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								395,
-								395
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1013,7 +950,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 29.0
 	},
 	"input":
 	{
