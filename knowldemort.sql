@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2019 at 06:06 PM
+-- Generation Time: Dec 15, 2019 at 11:12 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -39,6 +39,7 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`course_tag`, `course_name`, `field`) VALUES
+('focp', 'Fundamentals of Computer Programming', 'Computer Science'),
 ('we', 'Web Engineering', 'Computer Science');
 
 -- --------------------------------------------------------
@@ -58,7 +59,8 @@ CREATE TABLE `course_enroll` (
 --
 
 INSERT INTO `course_enroll` (`course`, `student`, `enroll_id`) VALUES
-(1, 3, 2);
+(1, 3, 2),
+(2, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -74,15 +76,66 @@ CREATE TABLE `course_instance` (
   `semester` int(11) NOT NULL,
   `instructor` int(11) NOT NULL,
   `pre_req` varchar(127) DEFAULT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `now` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `course_instance`
 --
 
-INSERT INTO `course_instance` (`course`, `credit_hour`, `year`, `degree`, `semester`, `instructor`, `pre_req`, `id`) VALUES
-('we', 3, 2019, 1, 5, 1, NULL, 1);
+INSERT INTO `course_instance` (`course`, `credit_hour`, `year`, `degree`, `semester`, `instructor`, `pre_req`, `id`, `now`) VALUES
+('we', 3, 2019, 1, 5, 1, NULL, 1, 1),
+('focp', 3, 2017, 1, 1, 2, NULL, 2, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_item`
+--
+
+CREATE TABLE `course_item` (
+  `course` int(11) NOT NULL,
+  `item_name` varchar(127) NOT NULL,
+  `weight` float NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course_item`
+--
+
+INSERT INTO `course_item` (`course`, `item_name`, `weight`, `id`) VALUES
+(1, 'oht', 22.5, 1),
+(1, 'ese', 37.5, 2),
+(1, 'quiz', 7.5, 3),
+(1, 'assignment', 7.5, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_item_marks`
+--
+
+CREATE TABLE `course_item_marks` (
+  `item` int(11) NOT NULL,
+  `student` int(11) NOT NULL,
+  `total_marks` float NOT NULL,
+  `obtained_marks` float NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `average_marks` float NOT NULL,
+  `date` int(11) NOT NULL,
+  `approved` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course_item_marks`
+--
+
+INSERT INTO `course_item_marks` (`item`, `student`, `total_marks`, `obtained_marks`, `item_name`, `average_marks`, `date`, `approved`) VALUES
+(1, 3, 40, 32.5, 'OHT 1', 26, 20191010, 1),
+(1, 3, 40, 32.5, 'OHT 2', 26.86, 20191120, 1),
+(3, 3, 10, 10, 'quiz 1', 6.3, 20191215, 0);
 
 -- --------------------------------------------------------
 
@@ -139,7 +192,8 @@ CREATE TABLE `instructor` (
 --
 
 INSERT INTO `instructor` (`name`, `image`, `id`) VALUES
-('Mehdi', NULL, 1);
+('Mehdi', NULL, 1),
+('Ali', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -183,6 +237,24 @@ INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `vw_agg_marks`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_agg_marks` (
+`mymarks` double
+,`avgmarks` double
+,`mymarks_agg` double
+,`avgmarks_agg` double
+,`item_name` varchar(127)
+,`student` int(11)
+,`item` int(11)
+,`weight` float
+,`count` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Stand-in structure for view `vw_course_display`
 -- (See below for the actual view)
 --
@@ -196,6 +268,7 @@ CREATE TABLE `vw_course_display` (
 ,`instructor_id` int(11)
 ,`degree` varchar(255)
 ,`uni` varchar(255)
+,`now` int(10)
 );
 
 -- --------------------------------------------------------
@@ -215,7 +288,76 @@ CREATE TABLE `vw_course_display_pre` (
 ,`degree_tag` varchar(10)
 ,`uni_tag` varchar(10)
 ,`pre_req` varchar(127)
+,`now` int(10)
 );
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_item_weight`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_item_weight` (
+`student` int(11)
+,`item` int(11)
+,`weight` double
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_student_courses`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_student_courses` (
+`course_id` int(11)
+,`course_name` varchar(255)
+,`credit_hour` int(11)
+,`year` int(11)
+,`semester` int(11)
+,`instructor` varchar(255)
+,`instructor_id` int(11)
+,`degree` varchar(255)
+,`uni` varchar(255)
+,`now` int(10)
+,`student` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_student_items`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_student_items` (
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_student_item_marks`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_student_item_marks` (
+`total_marks` float
+,`obtained_marks` float
+,`item_name` varchar(255)
+,`average_marks` float
+,`type` varchar(127)
+,`date` int(11)
+,`course` int(11)
+,`student` int(11)
+,`weight` double
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_agg_marks`
+--
+DROP TABLE IF EXISTS `vw_agg_marks`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_agg_marks`  AS  select sum(`course_item_marks`.`obtained_marks`) AS `mymarks`,sum(`course_item_marks`.`average_marks`) AS `avgmarks`,((sum(`course_item_marks`.`obtained_marks`) / sum(`course_item_marks`.`total_marks`)) * `course_item`.`weight`) AS `mymarks_agg`,((sum(`course_item_marks`.`average_marks`) / sum(`course_item_marks`.`total_marks`)) * `course_item`.`weight`) AS `avgmarks_agg`,`course_item`.`item_name` AS `item_name`,`course_item_marks`.`student` AS `student`,`course_item_marks`.`item` AS `item`,`course_item`.`weight` AS `weight`,count(`course_item_marks`.`total_marks`) AS `count` from (`course_item_marks` join `course_item` on((`course_item_marks`.`item` = `course_item`.`id`))) group by `course_item_marks`.`student`,`course_item_marks`.`item` ;
 
 -- --------------------------------------------------------
 
@@ -224,7 +366,7 @@ CREATE TABLE `vw_course_display_pre` (
 --
 DROP TABLE IF EXISTS `vw_course_display`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display`  AS  select `vw_course_display_pre`.`course_id` AS `course_id`,`vw_course_display_pre`.`course_name` AS `course_name`,`vw_course_display_pre`.`credit_hour` AS `credit_hour`,`vw_course_display_pre`.`year` AS `year`,`vw_course_display_pre`.`semester` AS `semester`,`vw_course_display_pre`.`instructor` AS `instructor`,`vw_course_display_pre`.`instructor_id` AS `instructor_id`,`degree`.`name` AS `degree`,`university`.`full_name` AS `uni` from ((`vw_course_display_pre` join `degree` on((`vw_course_display_pre`.`degree_tag` = `degree`.`degree_tag`))) join `university` on((`vw_course_display_pre`.`uni_tag` = `university`.`uni_tag`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display`  AS  select `vw_course_display_pre`.`course_id` AS `course_id`,`vw_course_display_pre`.`course_name` AS `course_name`,`vw_course_display_pre`.`credit_hour` AS `credit_hour`,`vw_course_display_pre`.`year` AS `year`,`vw_course_display_pre`.`semester` AS `semester`,`vw_course_display_pre`.`instructor` AS `instructor`,`vw_course_display_pre`.`instructor_id` AS `instructor_id`,`degree`.`name` AS `degree`,`university`.`full_name` AS `uni`,`vw_course_display_pre`.`now` AS `now` from ((`vw_course_display_pre` join `degree` on((`vw_course_display_pre`.`degree_tag` = `degree`.`degree_tag`))) join `university` on((`vw_course_display_pre`.`uni_tag` = `university`.`uni_tag`))) ;
 
 -- --------------------------------------------------------
 
@@ -233,7 +375,43 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_course_display_pre`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display_pre`  AS  select `course_instance`.`id` AS `course_id`,`course`.`course_name` AS `course_name`,`course_instance`.`credit_hour` AS `credit_hour`,`course_instance`.`year` AS `year`,`course_instance`.`semester` AS `semester`,`instructor`.`name` AS `instructor`,`instructor`.`id` AS `instructor_id`,`degree_uni`.`degree` AS `degree_tag`,`degree_uni`.`uni` AS `uni_tag`,`course_instance`.`pre_req` AS `pre_req` from (((`course_instance` join `course` on((`course_instance`.`course` = `course`.`course_tag`))) join `instructor` on((`course_instance`.`instructor` = `instructor`.`id`))) join `degree_uni` on((`course_instance`.`degree` = `degree_uni`.`id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display_pre`  AS  select `course_instance`.`id` AS `course_id`,`course`.`course_name` AS `course_name`,`course_instance`.`credit_hour` AS `credit_hour`,`course_instance`.`year` AS `year`,`course_instance`.`semester` AS `semester`,`instructor`.`name` AS `instructor`,`instructor`.`id` AS `instructor_id`,`degree_uni`.`degree` AS `degree_tag`,`degree_uni`.`uni` AS `uni_tag`,`course_instance`.`pre_req` AS `pre_req`,`course_instance`.`now` AS `now` from (((`course_instance` join `course` on((`course_instance`.`course` = `course`.`course_tag`))) join `instructor` on((`course_instance`.`instructor` = `instructor`.`id`))) join `degree_uni` on((`course_instance`.`degree` = `degree_uni`.`id`))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_item_weight`
+--
+DROP TABLE IF EXISTS `vw_item_weight`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_item_weight`  AS  select `course_item_marks`.`student` AS `student`,`course_item_marks`.`item` AS `item`,(`course_item`.`weight` / count(`course_item_marks`.`item`)) AS `weight` from (`course_item_marks` join `course_item` on((`course_item`.`id` = `course_item_marks`.`item`))) group by `course_item_marks`.`student`,`course_item_marks`.`item` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_student_courses`
+--
+DROP TABLE IF EXISTS `vw_student_courses`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_student_courses`  AS  select `vw_course_display`.`course_id` AS `course_id`,`vw_course_display`.`course_name` AS `course_name`,`vw_course_display`.`credit_hour` AS `credit_hour`,`vw_course_display`.`year` AS `year`,`vw_course_display`.`semester` AS `semester`,`vw_course_display`.`instructor` AS `instructor`,`vw_course_display`.`instructor_id` AS `instructor_id`,`vw_course_display`.`degree` AS `degree`,`vw_course_display`.`uni` AS `uni`,`vw_course_display`.`now` AS `now`,`course_enroll`.`student` AS `student` from (`vw_course_display` join `course_enroll`) where (`vw_course_display`.`course_id` = `course_enroll`.`course`) order by `vw_course_display`.`now` desc,`course_enroll`.`student` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_student_items`
+--
+DROP TABLE IF EXISTS `vw_student_items`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_student_items`  AS  select `course_item_marks`.`total_marks` AS `total_marks`,`course_item_marks`.`obtained marks` AS `obtained marks`,`course_item_marks`.`item_name` AS `item_name`,`course_item_marks`.`average marks` AS `average marks`,`course_item`.`item_name` AS `type`,`course_item_marks`.`date` AS `date`,`course_item`.`course` AS `course`,`vw_item_weight`.`weight` AS `weight` from ((`course_item_marks` join `course_item` on((`course_item`.`id` = `course_item_marks`.`item`))) join `vw_item_weight` on(((`vw_item_weight`.`student` = `course_item_marks`.`student`) and (`vw_item_weight`.`item` = `course_item_marks`.`item`)))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_student_item_marks`
+--
+DROP TABLE IF EXISTS `vw_student_item_marks`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_student_item_marks`  AS  select `course_item_marks`.`total_marks` AS `total_marks`,`course_item_marks`.`obtained_marks` AS `obtained_marks`,`course_item_marks`.`item_name` AS `item_name`,`course_item_marks`.`average_marks` AS `average_marks`,`course_item`.`item_name` AS `type`,`course_item_marks`.`date` AS `date`,`course_item`.`course` AS `course`,`course_item_marks`.`student` AS `student`,`vw_item_weight`.`weight` AS `weight` from ((`course_item_marks` join `course_item` on((`course_item`.`id` = `course_item_marks`.`item`))) join `vw_item_weight` on(((`vw_item_weight`.`student` = `course_item_marks`.`student`) and (`vw_item_weight`.`item` = `course_item_marks`.`item`)))) ;
 
 --
 -- Indexes for dumped tables
@@ -262,6 +440,21 @@ ALTER TABLE `course_instance`
   ADD KEY `degree` (`degree`),
   ADD KEY `instructor` (`instructor`),
   ADD KEY `pre_req` (`pre_req`);
+
+--
+-- Indexes for table `course_item`
+--
+ALTER TABLE `course_item`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `course` (`course`);
+
+--
+-- Indexes for table `course_item_marks`
+--
+ALTER TABLE `course_item_marks`
+  ADD PRIMARY KEY (`item_name`,`item`,`student`) USING BTREE,
+  ADD KEY `item` (`item`),
+  ADD KEY `student` (`student`);
 
 --
 -- Indexes for table `degree`
@@ -303,13 +496,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `course_enroll`
 --
 ALTER TABLE `course_enroll`
-  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `course_instance`
 --
 ALTER TABLE `course_instance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `course_item`
+--
+ALTER TABLE `course_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `degree_uni`
@@ -321,7 +520,7 @@ ALTER TABLE `degree_uni`
 -- AUTO_INCREMENT for table `instructor`
 --
 ALTER TABLE `instructor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -348,6 +547,19 @@ ALTER TABLE `course_instance`
   ADD CONSTRAINT `course_instance_ibfk_2` FOREIGN KEY (`degree`) REFERENCES `degree_uni` (`id`),
   ADD CONSTRAINT `course_instance_ibfk_3` FOREIGN KEY (`instructor`) REFERENCES `instructor` (`id`),
   ADD CONSTRAINT `course_instance_ibfk_4` FOREIGN KEY (`pre_req`) REFERENCES `course` (`course_tag`);
+
+--
+-- Constraints for table `course_item`
+--
+ALTER TABLE `course_item`
+  ADD CONSTRAINT `course_item_ibfk_1` FOREIGN KEY (`course`) REFERENCES `course_instance` (`id`);
+
+--
+-- Constraints for table `course_item_marks`
+--
+ALTER TABLE `course_item_marks`
+  ADD CONSTRAINT `course_item_marks_ibfk_1` FOREIGN KEY (`item`) REFERENCES `course_item` (`id`),
+  ADD CONSTRAINT `course_item_marks_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`uid`);
 
 --
 -- Constraints for table `degree_uni`
