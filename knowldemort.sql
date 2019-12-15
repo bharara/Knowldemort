@@ -21,6 +21,40 @@ SET time_zone = "+00:00";
 --
 -- Database: `knowldemort`
 --
+--
+-- Table structure for table `courses`
+--
+
+CREATE TABLE `courses` (
+  `cid` int(11) NOT NULL,
+  `coursename` varchar(255) NOT NULL,
+  `instructorname` varchar(255) NOT NULL,
+  `credithours` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`cid`, `coursename`, `instructorname`, `credithours`) VALUES
+(3433, 'java', 'hamer', '3+1'),
+(22100, 'Javascript', 'Abdul Hadi', '2+1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enrolled`
+--
+
+CREATE TABLE `enrolled` (
+  `courseid` int(11) NOT NULL,
+  `userid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 
+--
+
 
 -- --------------------------------------------------------
 
