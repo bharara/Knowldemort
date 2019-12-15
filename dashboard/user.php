@@ -2,8 +2,8 @@
 <html>
 <head>
 <?php
-    include "../includes/header.php";
-    require_once "dbcode.php";
+    // include "../includes/header.php";
+    require_once "../includes/dbcode.php";
     if(!(isset($_SESSION["sid"]))) {
         $msg = "You need to Login First";
         $url = $app_path . "index.php?page=login&msg=". $msg;

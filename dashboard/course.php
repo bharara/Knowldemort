@@ -13,13 +13,43 @@
   $id = $_GET["course"];
   include "../includes/dbfun.php";
   $course_info = get_course_info ($id);
+  $is_enrolled = is_enrolled($id);
 
 ?>
   <title> <?php echo $course_info["name"];?>  - Knowldemort</title>
 </head>
 <body>
+  <!--Banner-->
+<div class="bg-color">
+<div class="banner-text text-center">
+  <div class="text-border">
+    <h2 class="text-dec"><?php echo $course_info["name"];?></h2>
+  </div>
+  <div class="intro-para text-center quote">
+    <?php echo "<p class='small-text'>
+    Offered at: $course_info[uni]<br>
+    Delivered by: <a href='instructor.php?id=$course_info[instructor_id]'> $course_info[instructor]</a><br>
+    Credit Hours: $course_info[ch]
+    </p>";?>
+  </div>
+</div></div>
+<!--/ Banner-->
 
+<section class="section-padding">
+  <div class="col-9">
+    Reviews
+  </div>
 
+  <div class="col-3">
+    <?php
+      if ($is_enrolled)
+        echo "<a href='unenroll.php?course=$course_info[id]'>Unenroll</a>";
+      else
+        echo "<a href='enroll.php?course=$course_info[id]'>Enroll here</a>";
+      ?>
+   </div>
+
+</section>
 <?php include $app_path . "includes/footer.php" ?>
 </body>
 </html>
