@@ -19,7 +19,8 @@
 <div class="bg-color">
 <div class="banner-text text-center">
   <div class="text-border">
-    <h2 class="text-dec"> Hello <?php echo $_SESSION["name"] ?>!<br> Welcome to Knowldemort</h2>
+    <h2 class="text-dec"> Hello! - <?php echo $_SESSION["name"] ?></h2>
+    <h4 style="color: white;">Welcome to Knowldemort</h4>
   </div>
   <div class="intro-para text-center quote">
     <p class="small-text"> You have 6 new Notification</p>
@@ -77,31 +78,57 @@
 </div>
 </section>
 
-	<div class="col-12">
-		<div class="col-9">
+<section id="work-shop" class="section-padding">
+<div class="container">
+  <div class="row">
+    <div class="header-section text-center">
+      <h2>New in Your Courses</h2>
+      <hr class="bottom-line">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/c.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">FOCP</p>
+          <p class="pm-staff-profile-bio"> Saim added 2 new Slides</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/android-logo.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">Web Engineering</p>
+          <p class="pm-staff-profile-bio">Asim posted in forum</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="pm-staff-profile-container">
+        <div class="pm-staff-profile-image-wrapper text-center">
+          <div class="pm-staff-profile-image">
+            <img src="/Knowldemort/images/js.png" alt="" class="img-thumbnail img-circle" />
+          </div>
+        </div>
+        <div class="pm-staff-profile-details text-center">
+          <p class="pm-staff-profile-name">DLD</p>
+          <p class="pm-staff-profile-bio">Your comment got 1 reply</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
-		    <div class="userbox col-12">
-		    	<h2>Content Added in Your Courses: </h2>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/c.png">
-					<br><i> Saim added 2 new Slides </i><br>
-				</div>
-
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/android-logo.png">
-					<br><i> Asim posted in forum</i><br>
-				</div>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/js.png">
-					<br><i> 6 people posted in forum</i><br>
-				</div>
-				<div class="col-3 courseimage">
-					<img src="/Knowldemort/images/calc.jpeg">
-					<br><i>Your comment got 1 reply</i><br>
-				</div>
-				<button type=button class="center col-12">See More <i class="fa fa-arrow-down"></i><br></button>
-		    </div>
-		</div>
+<!-- 	<div class="col-12">
 		<div class="col-3 sidebar">
 			<h1 class="col-12">Meanwhile</h1>
 
@@ -158,7 +185,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php include $app_path . "includes/footer.php" ?>
 	
