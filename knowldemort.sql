@@ -29,7 +29,8 @@ CREATE TABLE `courses` (
   `cid` int(11) NOT NULL,
   `coursename` varchar(255) NOT NULL,
   `instructorname` varchar(255) NOT NULL,
-  `credithours` varchar(15) NOT NULL
+  `credithours` varchar(15) NOT NULL,
+  `coursimg` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -37,8 +38,8 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`cid`, `coursename`, `instructorname`, `credithours`) VALUES
-(3433, 'java', 'hamer', '3+1'),
-(22100, 'Javascript', 'Abdul Hadi', '2+1');
+(3433, 'java', 'hamer', '3+1', '\"/Knowldemort/images/js.png\"'),
+(22100, 'Javascript', 'Abdul Hadi', '2+1', '\"/Knowldemort/images/course01.jpg\"');
 
 -- --------------------------------------------------------
 
@@ -52,8 +53,15 @@ CREATE TABLE `enrolled` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 
+-- Dumping data for table `enrolled`
 --
+
+INSERT INTO `enrolled` (`courseid`, `userid`) VALUES
+(3433, 123),
+(22100, 123),
+(22100, 123),
+(22100, 123),
+(3433, 123);
 
 
 -- --------------------------------------------------------
@@ -182,9 +190,13 @@ INSERT INTO `university` (`uni_tag`, `full_name`) VALUES
 CREATE TABLE `users` (
   `uid` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
+  `userimg` text NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `type` varchar(100) NOT NULL
+  `type` varchar(100) NOT NULL,
+  `degree` varchar(255) NOT NULL,
+  `year` year(4) NOT NULL,
+  `uni` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -192,7 +204,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`) VALUES
-(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', '');
+(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', ''),
+(123, 'rabia', '\"/Knowldemort/images/usimg.jpg\"', 'r@gmail.com', '12345678', 'std', 'Bachelor\'s in Software Engineering', 2017, 'National University Of Sciences and Technology');
 
 -- --------------------------------------------------------
 
