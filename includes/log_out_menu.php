@@ -1,4 +1,4 @@
-<?php  include "config.php"; ?>
+<?php  require_once "config.php"; ?>
 
 <!--Navigation bar-->
 <nav class="navbar navbar-default navbar-fixed-top">

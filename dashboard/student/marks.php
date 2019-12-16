@@ -17,6 +17,8 @@
   $is_enrolled = is_enrolled($id);
   $course_items = get_course_items ($id, $_SESSION["sid"]);
 
+  require_once "../../model/model.php";
+  $grades = get_predicted_grade ($id, $_SESSION["sid"]);
 ?>
   <title> <?php echo $course_info["name"];?>  - Knowldemort</title>
 </head>
@@ -36,6 +38,36 @@
   </div>
 </div></div>
 <!--/ Banner-->
+<section id="work-shop" class="section-padding">
+  <table width="50%" align="center" border="1" style="text-align: center;">
+    <tr>
+      <th style="text-align: center;">Item</th>
+      <th style="text-align: center;">Value</th>
+    </tr>
+    <?php echo "
+      <tr>
+        <td>Current Absolute Marks </td>
+        <td>$grades[mine]</td>
+      </tr>
+      <tr>
+        <td>Predicted Absolute Marks </td>
+        <td>$grades[mineP]</td>
+      </tr>
+      <tr>
+        <td>Current Average Absolute Marks </td>
+        <td>$grades[avg]</td>
+      </tr>
+      <tr>
+        <td>Predicted Average Absolute Marks </td>
+        <td>$grades[avgP]</td>
+      </tr>
+      <tr>
+        <td>Predicted Grade</td>
+        <td>$grades[grade]</td>
+      </tr>";?>
+  </table>
+</section>
+
 
 <section class="section-padding">
 

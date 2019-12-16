@@ -167,7 +167,8 @@ function get_course_items (int $cid, int $sid) {
 }
 
 function is_enrolled ($cid) {
-	session_start ();
+	if(!isset($_SESSION)) 
+        session_start();
 	return in_array($cid, $_SESSION["courses"]);
 }
 
@@ -280,4 +281,26 @@ function is_a_student ($i_courses, $s_courses) {
     }
     return false;
 }
+
+function get_current_agg ($cid, $sid) {
+	include "dbcode.php";
+	$query = "SELECT sum(mymarks_agg), sum(avgmarks_agg), sum(weight)
+			FROM vw_agg_marks
+			WHERE course = ? AND student = ?
+			GROUP BY course, student";
+	$stmt = mysqli_prepare($link, $query);
+	mysqli_stmt_bind_param($stmt, "ss", $cid, $sid);
+
+	if (mysqli_stmt_execute($stmt)) {
+		mysqli_stmt_store_result($stmt);
+		mysqli_stmt_bind_result($stmt, $mine, $avg, $weight);
+		mysqli_stmt_fetch($stmt);
+
+		return ["mine" => $mine, "avg" => $avg,  "weight" => $weight];
+	}
+	else {
+		header("location:../index.php");
+	}
+}
+
 ?>

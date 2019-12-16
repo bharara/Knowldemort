@@ -44,7 +44,5 @@ include "../includes/dbcode.php";
 	else {
 		$message = "Database Unavailable";
 		header("location:../index.php?page=login&msg=".$message);
-	}
-
-	
+	}	
 ?>

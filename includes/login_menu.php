@@ -1,4 +1,8 @@
-<?php  include "../includes/config.php"; ?>
+<?php  require_once "../includes/config.php";
+if(!isset($_SESSION["sid"])) 
+  session_start();
+$img = $app_path. "images/users/" .$_GET["img"];
+?>
 
 <!--Navigation bar-->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -11,10 +15,11 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="<?php echo $app_path ?>dashboard">Know<span>ldemort</span></a>
+      <a class="navbar-brand" href="<?php echo $app_path ?>">Know<span>ldemort</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+         <li><a href="<?php echo $app_path ?>dashboard">Home</a></li>
          <li><a href="<?php echo $app_path ?>dashboard/courselist.php">Course Catalog</a></li>
          <li><a href="<?php echo $app_path ?>dashboard/user.php">My Profile <i class="fa fa-user"></i></a></li>
          <li><a href="<?php echo $app_path ?>dashboard/">Notifications <i class="fa fa-bell"></i> (6)</a></li>
@@ -26,8 +31,10 @@
           </form>
         </li> -->
         <li class="btn-trial"><a href="<?php echo $app_path ?>logoutPages/sign_out.php">Sign Out <i class="fa fa-sign-out"></i></a></li>
+        <li><a href="<?php echo $app_path ?>dashboard/user.php">
+          <img width=40px style="border-radius: 100%;" src="<?php echo $img;?>">
+        </a></li>
       </ul>
     </div>
   </div>
 </nav>
-<!--/ Navigation bar-->
