@@ -19,35 +19,35 @@
 
 	<h1> Courses Offered by Your School </h1>
 <?php
-        $sql = 'SELECT cid , coursename, instructorname, credithours  FROM courses';
+        $sql = 'SELECT cid , course_name, coursimg, credithours  FROM course';
 
    $retval = mysqli_query($link, $sql);
 
    if(! $retval ) {
-      die('Could not get data: ' . mysqli_error());
+      die('Could not get data: ' . mysqli_error($link));
    }
    if (mysqli_num_rows($retval) > 0) {
             while($row = mysqli_fetch_assoc($retval)) {
 
 
 
-               $coursename = $row["coursename"];
+               $coursename = $row["course_name"];
                $cid = $row["cid"];
-               $instructorname = $row["instructorname"];
+
                $credithours = $row["credithours"];
                ?>
 <div class="userbox col-12">
     <div class="col-3 courseimage" >
-        <img src="/Knowldemort/images/js.png">
+        <img src=  <?php echo $row["coursimg"]; ?>  >
     </div>
 
     <div class="col-9">
 
-               <h2 > <?php echo $row["coursename"]; ?></h2>
+               <h2 > <?php echo $row["course_name"]; ?></h2>
 		<div class="col-4">
 	        <b> Course Code: </b> <i> <?php echo $row["cid"]; ?></i><br>
 	        <b> Credit Hours: </b> <i> <?php echo $row["credithours"]; ?></i><br>
-	        <b> Instructor Name: </b> <i><?php echo $row["instructorname"]; ?></i><br>
+
 		</div>
 		<div class="col-4">
 			<h4 style="padding: 0; margin: 0">Connected People Enrolled</h4>
@@ -58,18 +58,20 @@
 		<div class="col-4">
 
 			<b>Timetable: </b><i>Compatible</i><br><br>
-			<a href="/Knowldemort/logoutPages/getusers.php?id=<?php echo $row["cid"]; ?>">Enroll here</a>
+			<a href="/Knowldemort/logoutPages/addenroll.php?id=<?php echo $row["cid"]; ?>&uid=<?php echo $_SESSION["sid"]; ?>">Enroll here</a>
 
 		</div>
 	</div>
 </div>
                <?php
             }
+
    } else {
        echo "0 results";
    }
-        ?>
 
+
+        ?>
 
 
     <?php include $app_path . "includes/general_footer.php" ?>
