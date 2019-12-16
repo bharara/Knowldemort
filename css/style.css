@@ -138,6 +138,10 @@ Banner
 	color: #fff;
 	margin-top: 30px;
 }
+
+.intro-para img {
+    max-height: 300px;
+}
 .quote .btn{
     background-color:
 }

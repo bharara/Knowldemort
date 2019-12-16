@@ -7,23 +7,27 @@
   include "../includes/dbfun.php";
   session_start ();
 
-  if(isset($_GET["id"]))
+  if(isset($_GET["id"])) {
     $id = $_GET["id"];
-  else
+    $info = get_student_info ($id);
+  }
+  else {
     $id = $_SESSION ["sid"];
+    $info = $_SESSION;
+  }
 
 ?>
-  <title> <?php echo $_SESSION["name"];?>  - Knowldemort</title>
+  <title> <?php echo $info["name"];?>  - Knowldemort</title>
 </head>
 <body>
   <!--Banner-->
 <div class="bg-color">
 <div class="banner-text text-center">
   <div class="text-border">
-    <h2 class="text-dec"><?php echo $_SESSION["name"];?></h2>
+    <h2 class="text-dec"><?php echo $info["name"];?></h2>
   </div>
   <div class="intro-para text-center quote">
-    <?php echo "<img src='../images/users/$_SESSION[img]'>"?>
+    <?php echo "<img src='../images/users/$info[img]'>"?>
   </div>
 </div></div>
 <!--/ Banner-->
@@ -51,12 +55,6 @@
         include "course_ind.php";
 
       }?>
-
-        <!-- <div class="pm-staff-profile-image-wrapper text-center"> -->
-          <!-- <div class="pm-staff-profile-image"> -->
-            <!-- <img src="images/mentor.jpg" alt="" class="img-thumbnail img-circle" /> -->
-          <!-- </div> -->
-        <!-- </div> -->
 
     </div>
   </div>

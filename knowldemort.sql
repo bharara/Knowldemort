@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2019 at 11:12 PM
+-- Generation Time: Dec 16, 2019 at 07:33 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -60,7 +60,9 @@ CREATE TABLE `course_enroll` (
 
 INSERT INTO `course_enroll` (`course`, `student`, `enroll_id`) VALUES
 (1, 3, 2),
-(2, 3, 3);
+(2, 3, 3),
+(1, 4, 4),
+(2, 4, 5);
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,30 @@ CREATE TABLE `instructor` (
 
 INSERT INTO `instructor` (`name`, `image`, `id`) VALUES
 ('Mehdi', NULL, 1),
-('Ali', NULL, 2);
+('Ali', 'joker.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `instructor_review`
+--
+
+CREATE TABLE `instructor_review` (
+  `id` int(11) NOT NULL,
+  `instructor` int(11) NOT NULL,
+  `student` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `detail` varchar(511) NOT NULL,
+  `score` int(11) NOT NULL,
+  `is_annon` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `instructor_review`
+--
+
+INSERT INTO `instructor_review` (`id`, `instructor`, `student`, `title`, `detail`, `score`, `is_annon`) VALUES
+(1, 2, 4, 'Answer all queries in Class', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto\r\nLaudantium enim repellat sapiente quos architecto', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -224,15 +249,17 @@ CREATE TABLE `users` (
   `Name` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `type` varchar(100) NOT NULL
+  `type` varchar(100) NOT NULL,
+  `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`) VALUES
-(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', '');
+INSERT INTO `users` (`uid`, `Name`, `email`, `password`, `type`, `img`) VALUES
+(3, 'Abdul Hadi Bharara', 'ahadi.bese17seecs@seecs.edu.pk', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6lsOlgK', '', '3.jpg'),
+(4, 'Hamza Khan', 'hk@h.com', '$2y$10$PS9Tf9SUzUi7CwtKt3r2Z.IkoXpbrPHwLVasKfMf3wepW.6l4OlgK', '', '4.jpg');
 
 -- --------------------------------------------------------
 
@@ -289,6 +316,43 @@ CREATE TABLE `vw_course_display_pre` (
 ,`uni_tag` varchar(10)
 ,`pre_req` varchar(127)
 ,`now` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_instructor_courses`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_instructor_courses` (
+`course_id` int(11)
+,`course_name` varchar(255)
+,`credit_hour` int(11)
+,`year` int(11)
+,`semester` int(11)
+,`degree` varchar(255)
+,`uni` varchar(255)
+,`now` int(10)
+,`instructor` int(11)
+,`students` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_instructor_review`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_instructor_review` (
+`id` int(11)
+,`instructor` int(11)
+,`student` int(11)
+,`Name` varchar(255)
+,`img` varchar(255)
+,`title` varchar(255)
+,`detail` varchar(511)
+,`score` int(11)
+,`is_annon` int(11)
 );
 
 -- --------------------------------------------------------
@@ -376,6 +440,24 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `vw_course_display_pre`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_display_pre`  AS  select `course_instance`.`id` AS `course_id`,`course`.`course_name` AS `course_name`,`course_instance`.`credit_hour` AS `credit_hour`,`course_instance`.`year` AS `year`,`course_instance`.`semester` AS `semester`,`instructor`.`name` AS `instructor`,`instructor`.`id` AS `instructor_id`,`degree_uni`.`degree` AS `degree_tag`,`degree_uni`.`uni` AS `uni_tag`,`course_instance`.`pre_req` AS `pre_req`,`course_instance`.`now` AS `now` from (((`course_instance` join `course` on((`course_instance`.`course` = `course`.`course_tag`))) join `instructor` on((`course_instance`.`instructor` = `instructor`.`id`))) join `degree_uni` on((`course_instance`.`degree` = `degree_uni`.`id`))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_instructor_courses`
+--
+DROP TABLE IF EXISTS `vw_instructor_courses`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_instructor_courses`  AS  select `vw_student_courses`.`course_id` AS `course_id`,`vw_student_courses`.`course_name` AS `course_name`,`vw_student_courses`.`credit_hour` AS `credit_hour`,`vw_student_courses`.`year` AS `year`,`vw_student_courses`.`semester` AS `semester`,`vw_student_courses`.`degree` AS `degree`,`vw_student_courses`.`uni` AS `uni`,`vw_student_courses`.`now` AS `now`,`vw_student_courses`.`instructor_id` AS `instructor`,count(`vw_student_courses`.`student`) AS `students` from `vw_student_courses` group by `vw_student_courses`.`instructor_id` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_instructor_review`
+--
+DROP TABLE IF EXISTS `vw_instructor_review`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_instructor_review`  AS  select `instructor_review`.`id` AS `id`,`instructor_review`.`instructor` AS `instructor`,`instructor_review`.`student` AS `student`,`users`.`Name` AS `Name`,`users`.`img` AS `img`,`instructor_review`.`title` AS `title`,`instructor_review`.`detail` AS `detail`,`instructor_review`.`score` AS `score`,`instructor_review`.`is_annon` AS `is_annon` from (`instructor_review` join `users` on((`instructor_review`.`student` = `users`.`uid`))) ;
 
 -- --------------------------------------------------------
 
@@ -477,6 +559,14 @@ ALTER TABLE `instructor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `instructor_review`
+--
+ALTER TABLE `instructor_review`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `instructor` (`instructor`),
+  ADD KEY `student` (`student`);
+
+--
 -- Indexes for table `university`
 --
 ALTER TABLE `university`
@@ -496,7 +586,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `course_enroll`
 --
 ALTER TABLE `course_enroll`
-  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `course_instance`
@@ -523,10 +613,16 @@ ALTER TABLE `instructor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `instructor_review`
+--
+ALTER TABLE `instructor_review`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -567,6 +663,13 @@ ALTER TABLE `course_item_marks`
 ALTER TABLE `degree_uni`
   ADD CONSTRAINT `degree_uni_ibfk_1` FOREIGN KEY (`degree`) REFERENCES `degree` (`degree_tag`),
   ADD CONSTRAINT `degree_uni_ibfk_2` FOREIGN KEY (`uni`) REFERENCES `university` (`uni_tag`);
+
+--
+-- Constraints for table `instructor_review`
+--
+ALTER TABLE `instructor_review`
+  ADD CONSTRAINT `instructor_review_ibfk_1` FOREIGN KEY (`instructor`) REFERENCES `instructor` (`id`),
+  ADD CONSTRAINT `instructor_review_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`uid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

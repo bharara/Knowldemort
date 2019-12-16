@@ -4,7 +4,7 @@ include "../includes/dbcode.php";
 
 	$password = trim($_POST["password"]);
 
-	$query = "SELECT uid, Name, email, password, type FROM users WHERE email = ?";
+	$query = "SELECT uid, Name, email, password, type, img FROM users WHERE email = ?";
 	$stmt = mysqli_prepare($link, $query);
 	mysqli_stmt_bind_param($stmt, "s", $param_email);
 	$param_email = trim($_POST["email"]);
@@ -13,17 +13,19 @@ include "../includes/dbcode.php";
 		mysqli_stmt_store_result($stmt);
 		if(mysqli_stmt_num_rows($stmt) == 1) {                    
 			// Bind result variables
-			mysqli_stmt_bind_result($stmt, $sid, $name, $email, $hashed_password, $type);
+			mysqli_stmt_bind_result($stmt, $sid, $name, $email, $hashed_password, $type, $img);
 			mysqli_stmt_fetch($stmt);
 			if(password_verify($password, $hashed_password)){
 				session_start();
+				include_once ("../includes/dbfun.php");
 				
 				// Store data in session variables
 				$_SESSION["sid"] = $sid;
 				$_SESSION["name"] = $name;
 				$_SESSION["email"] = $email;
 				$_SESSION["type"] = $type;
-				$_SESSION["img"] = "3.jpg";
+				$_SESSION["img"] = $img;
+				$_SESSION["courses"] = student_course_list ($sid);
 
 
 				$url = $url = 'http://localhost/Knowldemort/';

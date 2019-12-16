@@ -30,7 +30,7 @@
   <div class="intro-para text-center quote">
     <?php echo "<p class='small-text'>
     Offered at: $course_info[uni]<br>
-    Delivered by: <a href='instructor.php?id=$course_info[instructor_id]'> $course_info[instructor]</a><br>
+    Delivered by: <a href='../instructor.php?id=$course_info[instructor_id]'> $course_info[instructor]</a><br>
     Credit Hours: $course_info[ch]
     </p>";?>
   </div>
