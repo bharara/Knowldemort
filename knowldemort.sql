@@ -29,18 +29,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `course` (
+  `cid` int(11) NOT NULL,
   `course_tag` varchar(127) NOT NULL,
   `course_name` varchar(255) NOT NULL,
-  `field` varchar(255) NOT NULL
+  `field` varchar(255) NOT NULL,
+  `coursimg` varchar(255) NOT NULL,
+  `credithours` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_tag`, `course_name`, `field`) VALUES
-('focp', 'Fundamentals of Computer Programming', 'Computer Science'),
-('we', 'Web Engineering', 'Computer Science');
+INSERT INTO `course` (`cid`, `course_tag`, `course_name`, `field`, `coursimg`, `credithours`) VALUES
+(111, 'focp', 'Fundamentals of Computer Programming', 'Computer Science', '\"/Knowldemort/images/js.png\"', '2+1'),
+(222, 'we', 'Web Engineering', 'Computer Science', '\"/Knowldemort/images/course01.jpg\"', '3+1');
 
 -- --------------------------------------------------------
 
@@ -58,11 +61,14 @@ CREATE TABLE `course_enroll` (
 -- Dumping data for table `course_enroll`
 --
 
+
 INSERT INTO `course_enroll` (`course`, `student`, `enroll_id`) VALUES
 (1, 3, 2),
 (2, 3, 3),
 (1, 4, 4),
-(2, 4, 5);
+(2, 4, 5),
+(111, 3, 6),
+(222, 3, 7);
 
 -- --------------------------------------------------------
 
@@ -498,7 +504,22 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 -- Indexes for dumped tables
 --
+--
+-- Indexes for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  ADD PRIMARY KEY (`enroll_id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
 --
 -- Indexes for table `course`
 --
