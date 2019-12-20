@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2019 at 04:41 AM
+-- Generation Time: Dec 17, 2019 at 07:32 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -141,29 +141,6 @@ INSERT INTO `course_item_marks` (`item`, `student`, `total_marks`, `obtained_mar
 (3, 3, 10, 7.5, 'quiz 2', 7.25, 20191001, 0),
 (3, 3, 10, 7.5, 'quiz 3', 5.7, 20191017, 0),
 (3, 3, 10, 0, 'quiz 4', 3.56, 20191125, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `course_review`
---
-
-CREATE TABLE `course_review` (
-  `id` int(11) NOT NULL,
-  `course` int(11) NOT NULL,
-  `student` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `detail` varchar(511) NOT NULL,
-  `score` int(11) NOT NULL,
-  `is_annon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `course_review`
---
-
-INSERT INTO `course_review` (`id`, `course`, `student`, `title`, `detail`, `score`, `is_annon`) VALUES
-(3, 1, 4, 'Learned a lot but content was over whelming', 'Would recommend to everyone', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -349,24 +326,6 @@ CREATE TABLE `vw_course_display_pre` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `vw_course_review`
--- (See below for the actual view)
---
-CREATE TABLE `vw_course_review` (
-`id` int(11)
-,`course` int(11)
-,`student` int(11)
-,`Name` varchar(255)
-,`img` varchar(255)
-,`title` varchar(255)
-,`detail` varchar(511)
-,`score` int(11)
-,`is_annon` int(11)
-);
-
--- --------------------------------------------------------
-
---
 -- Stand-in structure for view `vw_instructor_courses`
 -- (See below for the actual view)
 --
@@ -436,6 +395,15 @@ CREATE TABLE `vw_student_courses` (
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `vw_student_items`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_student_items` (
+);
+
+-- --------------------------------------------------------
+
+--
 -- Stand-in structure for view `vw_student_item_marks`
 -- (See below for the actual view)
 --
@@ -481,15 +449,6 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `vw_course_review`
---
-DROP TABLE IF EXISTS `vw_course_review`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_course_review`  AS  select `course_review`.`id` AS `id`,`course_review`.`course` AS `course`,`course_review`.`student` AS `student`,`users`.`Name` AS `Name`,`users`.`img` AS `img`,`course_review`.`title` AS `title`,`course_review`.`detail` AS `detail`,`course_review`.`score` AS `score`,`course_review`.`is_annon` AS `is_annon` from (`course_review` join `users` on((`course_review`.`student` = `users`.`uid`))) ;
-
--- --------------------------------------------------------
-
---
 -- Structure for view `vw_instructor_courses`
 --
 DROP TABLE IF EXISTS `vw_instructor_courses`;
@@ -522,6 +481,15 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `vw_student_courses`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_student_courses`  AS  select `vw_course_display`.`course_id` AS `course_id`,`vw_course_display`.`course_name` AS `course_name`,`vw_course_display`.`credit_hour` AS `credit_hour`,`vw_course_display`.`year` AS `year`,`vw_course_display`.`semester` AS `semester`,`vw_course_display`.`instructor` AS `instructor`,`vw_course_display`.`instructor_id` AS `instructor_id`,`vw_course_display`.`degree` AS `degree`,`vw_course_display`.`uni` AS `uni`,`vw_course_display`.`now` AS `now`,`course_enroll`.`student` AS `student` from (`vw_course_display` join `course_enroll`) where (`vw_course_display`.`course_id` = `course_enroll`.`course`) order by `vw_course_display`.`now` desc,`course_enroll`.`student` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_student_items`
+--
+DROP TABLE IF EXISTS `vw_student_items`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_student_items`  AS  select `course_item_marks`.`total_marks` AS `total_marks`,`course_item_marks`.`obtained marks` AS `obtained marks`,`course_item_marks`.`item_name` AS `item_name`,`course_item_marks`.`average marks` AS `average marks`,`course_item`.`item_name` AS `type`,`course_item_marks`.`date` AS `date`,`course_item`.`course` AS `course`,`vw_item_weight`.`weight` AS `weight` from ((`course_item_marks` join `course_item` on((`course_item`.`id` = `course_item_marks`.`item`))) join `vw_item_weight` on(((`vw_item_weight`.`student` = `course_item_marks`.`student`) and (`vw_item_weight`.`item` = `course_item_marks`.`item`)))) ;
 
 -- --------------------------------------------------------
 
@@ -573,14 +541,6 @@ ALTER TABLE `course_item`
 ALTER TABLE `course_item_marks`
   ADD PRIMARY KEY (`item_name`,`item`,`student`) USING BTREE,
   ADD KEY `item` (`item`),
-  ADD KEY `student` (`student`);
-
---
--- Indexes for table `course_review`
---
-ALTER TABLE `course_review`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `course` (`course`),
   ADD KEY `student` (`student`);
 
 --
@@ -646,12 +606,6 @@ ALTER TABLE `course_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `course_review`
---
-ALTER TABLE `course_review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `degree_uni`
 --
 ALTER TABLE `degree_uni`
@@ -707,13 +661,6 @@ ALTER TABLE `course_item`
 ALTER TABLE `course_item_marks`
   ADD CONSTRAINT `course_item_marks_ibfk_1` FOREIGN KEY (`item`) REFERENCES `course_item` (`id`),
   ADD CONSTRAINT `course_item_marks_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`uid`);
-
---
--- Constraints for table `course_review`
---
-ALTER TABLE `course_review`
-  ADD CONSTRAINT `course_review_ibfk_1` FOREIGN KEY (`course`) REFERENCES `course_instance` (`id`),
-  ADD CONSTRAINT `course_review_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`uid`);
 
 --
 -- Constraints for table `degree_uni`

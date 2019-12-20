@@ -1,6 +1,4 @@
 
-<link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/form.css">
-
 <script language="javascript" >
 	function validate_log(){
 		if(registerForm.name.value=="") {
@@ -30,20 +28,27 @@
 		}
 	}
 </script>
-<div class=col-4></div>
-<form class="center col-4" name="registerForm" action="logoutPages/register_user.php" method="post" onSubmit="return validate_log()" >
-	 <?php
+
+<section class="section-padding">
+<form align=center name="contactForm" method="post">
+		 <?php
 		if(isset($_GET["msg"])) {
 			echo "<p class=error>" . $_GET["msg"] . "</p>";
 			unset ($_GET["msg"]);
 	}?>
 
+
 	<h1>Register Here</h1>
-	<input type="text" name="name" placeholder="Name">
-	<input type="email" name="email" placeholder="name@example.com">
-	<input type="password" name="password" placeholder="Password">
-	<input type="password" name="rpassword" placeholder="Repeat Password">
+	
+	<input type="text" name="name" placeholder="Name"><br><br>
+	<input type="email" name="email" placeholder="name@example.com"><br><br>
+	<input type="password" name="password" placeholder="Password"><br><br>
+	<input type="password" name="rpassword" placeholder="Repeat Password"><br><br>
 	<br><br>
-	<input type="submit" name="submit" value="Submit">
+	<input class='btn btn-green' type="submit" name="submit" value="Submit"><br><br>
+
 	<p>Already Have an Account? <a href="index.php?page=login">Login Here</a>.</p>
+
+
 </form>
+</section>

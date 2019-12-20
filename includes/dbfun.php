@@ -253,6 +253,42 @@ function get_instructor_reviews ($id) {
 	}
 }
 
+function get_course_reviews ($id) {
+	include "dbcode.php";
+
+	$query = "SELECT * FROM vw_course_review WHERE course = ?";
+	$stmt = mysqli_prepare($link, $query);
+	mysqli_stmt_bind_param($stmt, "s", $id);
+
+	if (mysqli_stmt_execute($stmt)) {
+		mysqli_stmt_store_result($stmt);
+		mysqli_stmt_bind_result($stmt, $rid, $iid, $sid, $sname, $img, $title, $details, $score, $is_annon);
+
+		$allrevs = array();
+
+		while(mysqli_stmt_fetch($stmt)){
+			$item_info = [
+			"rid" => $rid,
+			"sid" => $sid,
+			"sname" => $sname,
+			"img" => $img,
+			"title" => $title,
+			"details" => $details,
+			"score" => $score,
+			"is_annon" => $is_annon
+		];      
+			$allrevs[] = $item_info;       
+		}
+		
+		return $allrevs;
+	}
+
+	else {
+		// echo "Error";
+		header("location:../index.php");
+	}
+}
+
 
 function get_student_info ($id) {
 	include "dbcode.php";

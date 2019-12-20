@@ -19,62 +19,21 @@
 
 	<h1> Courses Offered by Your School </h1>
 <?php
-        $sql = 'SELECT cid , course_name, coursimg, credithours  FROM course';
-
+  $sql = "SELECT course_id as id, course_name as name, credit_hour, instructor_id, instructor FROM vw_course_display";
    $retval = mysqli_query($link, $sql);
 
-   if(! $retval ) {
-      die('Could not get data: ' . mysqli_error($link));
-   }
    if (mysqli_num_rows($retval) > 0) {
-            while($row = mysqli_fetch_assoc($retval)) {
+    while($row = mysqli_fetch_assoc($retval)) {
 
-
-
-               $coursename = $row["course_name"];
-               $cid = $row["cid"];
-
-               $credithours = $row["credithours"];
-               ?>
-<div class="userbox col-12">
-    <div class="col-3 courseimage" >
-        <img src=  <?php echo $row["coursimg"]; ?>  >
-    </div>
-
-    <div class="col-9">
-
-               <h2 > <?php echo $row["course_name"]; ?></h2>
-		<div class="col-4">
-	        <b> Course Code: </b> <i> <?php echo $row["cid"]; ?></i><br>
-	        <b> Credit Hours: </b> <i> <?php echo $row["credithours"]; ?></i><br>
-
-		</div>
-		<div class="col-4">
-			<h4 style="padding: 0; margin: 0">Connected People Enrolled</h4>
-		        <b> Saif Khan - </b>With You in 4 Other courses<br>
-		        <b>Saim Butt - </b>You shared 11 courses in the past<br>
-		        <b>*43 others in courses with you</b><br>
-		</div>
-		<div class="col-4">
-
-			<b>Timetable: </b><i>Compatible</i><br><br>
-			<a href="/Knowldemort/logoutPages/addenroll.php?id=<?php echo $row["cid"]; ?>&uid=<?php echo $_SESSION["sid"]; ?>">Enroll here</a>
-
-		</div>
-	</div>
-</div>
-               <?php
-            }
-
-   } else {
-       echo "0 results";
-   }
-
-
-        ?>
-
-
-    <?php include $app_path . "includes/general_footer.php" ?>
+        $_GLOBALS["course"] = $row;
+  
+        echo "<section class=section-padding>
+          <div class=row align=center>";
+        include "course_ind.php";
+        echo "</div></section>";
+      }
+    }?>
+    <?php include $app_path . "includes/footer.php" ?>
     
 </body>
 </html>

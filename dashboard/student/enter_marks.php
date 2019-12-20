@@ -15,7 +15,9 @@ $course = trim($_POST["course"]);
 $query = "INSERT INTO course_item_marks (item, student, total_marks, obtained_marks, item_name, average_marks, date, approved) VALUES (?, ?, ?, ?, ?, ?, ?, 0)";
 $stmt = mysqli_prepare($link, $query);
 mysqli_stmt_bind_param($stmt, "sssssss", $item, $sid, $total, $obt, $name, $avg, $date);
-
-	header("location: marks.php?course=$course");
+	if (mysqli_stmt_execute($stmt))
+		header("location: marks.php?course=$course");
+print_r($_POST);
+echo "$query";
 
 ?>

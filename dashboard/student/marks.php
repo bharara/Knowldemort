@@ -42,27 +42,24 @@
   <table width="50%" align="center" border="1" style="text-align: center;">
     <tr>
       <th style="text-align: center;">Item</th>
-      <th style="text-align: center;">Value</th>
+      <th style="text-align: center;">My Marks</th>
+      <th style="text-align: center;">Average</th>
+      <th style="text-align: center;">Total</th>
     </tr>
     <?php echo "
       <tr>
         <td>Current Absolute Marks </td>
         <td>$grades[mine]</td>
+        <td>$grades[avg]</td>
+        <td>$grades[weight]</td>
       </tr>
       <tr>
         <td>Predicted Absolute Marks </td>
         <td>$grades[mineP]</td>
-      </tr>
-      <tr>
-        <td>Current Average Absolute Marks </td>
-        <td>$grades[avg]</td>
-      </tr>
-      <tr>
-        <td>Predicted Average Absolute Marks </td>
         <td>$grades[avgP]</td>
+        <td>100%</td>
       </tr>
-      <tr>
-        <td>Predicted Grade</td>
+        <td colspan=3>Predicted Grade</td>
         <td>$grades[grade]</td>
       </tr>";?>
   </table>

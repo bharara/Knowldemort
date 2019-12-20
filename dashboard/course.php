@@ -14,7 +14,7 @@
   include "../includes/dbfun.php";
   $course_info = get_course_info ($id);
   $is_enrolled = is_enrolled($id);
-
+  $reviews = get_course_reviews($id);
 ?>
   <title> <?php echo $course_info["name"];?>  - Knowldemort</title>
 </head>
@@ -32,24 +32,42 @@
     Credit Hours: $course_info[ch]
     </p>";?>
   </div>
-</div></div>
-<!--/ Banner-->
-
-<section class="section-padding">
-  <div class="col-9">
-    Reviews
-  </div>
-
-  <div class="col-3">
+    <div class="col-3">
     <?php
       if ($is_enrolled)
-        echo "<a href='unenroll.php?course=$course_info[id]'>Unenroll</a>";
+        echo "<a class='btn btn-green btn-flat' href='unenroll.php?course=$course_info[id]'>Unenroll</a>";
       else
-        echo "<a href='enroll.php?course=$course_info[id]'>Enroll here</a>";
+        echo "<a class='btn btn-green btn-flat' href='enroll.php?course=$course_info[id]'>Enroll here</a>";
       ?>
    </div>
+</div></div>
+<!--/ Banner-->
+<?php
+  $numReviews = count($reviews);
 
-</section>
-<?php include $app_path . "includes/footer.php" ?>
+  if ($numReviews > 0 || $is_enrolled) {
+?>
+  <section id="work-shop" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Reviews</h2>
+        <hr class="bottom-line">
+        <?php
+          if ($is_enrolled) {
+          echo "<a class='btn btn-green'>Add Review </a><br>";
+        }?>
+      </div>
+
+      <?php
+      foreach($reviews as $review) {
+        $_GLOBALS["review"] = $review;
+        include "review.php";
+      }?>
+    </div>
+  </div>
+  </section>
+<?php }
+  include $app_path . "includes/footer.php"; ?>
 </body>
 </html>

@@ -15,7 +15,7 @@
 <div class="container">
   <div class="row">
     <div class="header-section text-center">
-      <h2>Upcoming Workshop</h2>
+      <h2>Events</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
       <hr class="bottom-line">
     </div>
@@ -25,7 +25,7 @@
           <i class="fa fa-html5 color-green"></i>
         </div>
         <div class="icon-text">
-          <h4 class="ser-text">Mentor HTML5 Workshop</h4>
+          <h4 class="ser-text">Events</h4>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
           <i class="fa fa-css3 color-green"></i>
         </div>
         <div class="icon-text">
-          <h4 class="ser-text">Mentor CSS3 Workshop</h4>
+          <h4 class="ser-text">Events</h4>
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@
           <i class="fa fa-joomla color-green"></i>
         </div>
         <div class="icon-text">
-          <h4 class="ser-text">Mentor Joomla Workshop</h4>
+          <h4 class="ser-text">Events</h4>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
 <div class="container">
   <div class="row">
     <div class="header-section text-center">
-      <h2>Meet Our Faculty Member</h2>
+      <h2>Teacher Profiles</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
       <hr class="bottom-line">
     </div>
@@ -71,7 +71,6 @@
         </div>
         <div class="pm-staff-profile-details text-center">
           <p class="pm-staff-profile-name">Bryan Johnson</p>
-          <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
           <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
         </div>
@@ -86,7 +85,6 @@
         </div>
         <div class="pm-staff-profile-details text-center">
           <p class="pm-staff-profile-name">Bryan Johnson</p>
-          <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
           <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
         </div>
@@ -101,7 +99,7 @@
         </div>
         <div class="pm-staff-profile-details text-center">
           <p class="pm-staff-profile-name">Bryan Johnson</p>
-          <p class="pm-staff-profile-title">Lead Software Engineer</p>
+          <!-- <p class="pm-staff-profile-title">Lead Software Engineer</p> -->
 
           <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
         </div>
@@ -111,31 +109,7 @@
 </div>
 </section>
 <!--/ Faculity member-->
-<!--Testimonial-->
-<section id="testimonial" class="section-padding">
-<div class="container">
-  <div class="row">
-    <div class="header-section text-center">
-      <h2 class="white">See What Our Customer Are Saying?</h2>
-      <p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-      <hr class="bottom-line bg-white">
-    </div>
-    <div class="col-md-6 col-sm-6">
-      <div class="text-comment">
-        <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-        <p class="text-name">Abraham Doe - Creative Dırector</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-sm-6">
-      <div class="text-comment">
-        <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-        <p class="text-name">Abraham Doe - Creative Dırector</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<!--/ Testimonial-->
+
 <!--Courses-->
 <section id="courses" class="section-padding">
 <div class="container">

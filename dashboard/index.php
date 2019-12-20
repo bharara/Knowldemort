@@ -93,7 +93,7 @@
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
-          <p class="pm-staff-profile-name">FOCP</p>
+          <p class="pm-staff-profile-name"><a href="course.php?course=2">FOCP</a></p>
           <p class="pm-staff-profile-bio"> Saim added 2 new Slides</p>
         </div>
       </div>
@@ -106,7 +106,7 @@
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
-          <p class="pm-staff-profile-name">Web Engineering</p>
+          <p class="pm-staff-profile-name"><a href="course.php?course=1">Web Engineering</p>
           <p class="pm-staff-profile-bio">Asim posted in forum</p>
         </div>
       </div>

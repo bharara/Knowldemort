@@ -29,10 +29,10 @@ function get_predicted_grade ($cid, $sid) {
 	$grade =  get_predicted_grade_pre($mine, $mine);
 	return [
 		"grade" => $grade[0],
-		"mineP" => $mine,
-		"avgP" => $avg,
-		"mine" => $marks["mine"],
-		"avg" => $marks["avg"],
+		"mineP" => round($mine),
+		"avgP" => round($avg),
+		"mine" => round($marks["mine"]),
+		"avg" => round($marks["avg"]),
 		"weight" => $marks["weight"]
 	];
 }
