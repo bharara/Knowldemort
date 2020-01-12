@@ -11,9 +11,10 @@
   }
 
   $id = $_GET["course"];
+  $is_enrolled = $_GET["isenroll"];
   include "../includes/dbfun.php";
   $course_info = get_course_info ($id);
-  $is_enrolled = is_enrolled($id);
+  //$is_enrolled = is_enrolled($id);
   $reviews = get_course_reviews($id);
 ?>
 

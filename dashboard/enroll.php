@@ -10,7 +10,7 @@ $stmt = mysqli_prepare($link, $query);
 mysqli_stmt_bind_param($stmt, "ss", $cid, $sid);
 
 if (mysqli_stmt_execute($stmt)) {
-	header("location: course.php?course=$cid");
+	header("location: course.php?course=$cid&isenroll=1");
 }
 else {
 	echo "error";
