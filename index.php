@@ -3,6 +3,7 @@
 <head>
 <?php
 	include "includes/header.php";
+    echo $app_path;
 	if(isset($_SESSION["sid"])) {
 		$url = $app_path . "dashboard";
 		header ("Location: $url");

@@ -27,6 +27,6 @@
 
 <!--Modal box-->
   <div class="modal fade" id="login" role="dialog">
-    <?php include "$app_path/logoutPages/login.php";?>
+    <?php include "$app_path" . "logoutPages/login.php";?>
   </div>
 <!--/ Modal box-->
