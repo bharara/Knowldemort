@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include "../includes/dbcode.php";
-
+echo "HELOOOOOOOO";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 

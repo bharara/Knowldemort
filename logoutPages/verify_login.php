@@ -15,7 +15,7 @@ include "../includes/dbcode.php";
 			// Bind result variables
 			mysqli_stmt_bind_result($stmt, $sid, $name, $email, $hashed_password, $type, $img);
 			mysqli_stmt_fetch($stmt);
-			if(password_verify($password, $hashed_password)){
+
 				session_start();
 				include_once ("../includes/dbfun.php");
 				
@@ -29,12 +29,8 @@ include "../includes/dbcode.php";
 
 
 				$url = $url = 'http://localhost/Knowldemort/';
-				header("Location: $url");
-			}
-			else {
-				$message = "Incorrect Password";
-				header("location:../index.php?page=login&msg=".$message);
-			}
+				header("Location: /Knowldemort/index.php");
+
 		}
 		else {
 			$message = "Incorrect Email";

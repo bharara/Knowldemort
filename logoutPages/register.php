@@ -39,7 +39,7 @@
 
 
 	<h1>Register Here</h1>
-	
+
 	<input type="text" name="name" placeholder="Name"><br><br>
 	<input type="email" name="email" placeholder="name@example.com"><br><br>
 	<input type="password" name="password" placeholder="Password"><br><br>
