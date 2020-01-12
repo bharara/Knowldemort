@@ -13,8 +13,8 @@ if (mysqli_stmt_execute($stmt)) {
 
 	$id = array_search($cid, $_SESSION["courses"]);
 	unset($_SESSION["courses"][$id]);
-	array_values($_SESSION["courses"])
-	header("location: course.php?course=$cid");
+	array_values($_SESSION["courses"]);
+	header("location: course.php?course=$cid&isenroll=0");
 }
 else {
 	echo "error";
