@@ -1,7 +1,7 @@
-<?php  require_once "../includes/config.php";
-if(!isset($_SESSION["sid"])) 
+<?php  include "../includes/config.php";
+if(!isset($_SESSION["sid"]))
   session_start();
-$img = $app_path. "images/users/" .$_GET["img"];
+//$img = $app_path. "images/users/" .$_GET["img"];
 ?>
 
 <!--Navigation bar-->
@@ -15,23 +15,23 @@ $img = $app_path. "images/users/" .$_GET["img"];
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="<?php echo $app_path ?>">Know<span>ldemort</span></a>
+      <a class="navbar-brand" href="">Know<span>ldemort</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="<?php echo $app_path ?>dashboard">Home</a></li>
-         <li><a href="<?php echo $app_path ?>dashboard/courselist.php">Course Catalog</a></li>
-         <li><a href="<?php echo $app_path ?>dashboard/user.php">My Profile <i class="fa fa-user"></i></a></li>
-         <li><a href="<?php echo $app_path ?>dashboard/">Notifications <i class="fa fa-bell"></i> (6)</a></li>
-         <li><a href="<?php echo $app_path ?>dashboard/">Calendar <i class="fa fa-calendar"></i></a></li>
+         <li><a href="#">Home</a></li>
+         <li><a href="courselist.php">Course Catalog</a></li>
+         <li><a href="user.php">My Profile <i class="fa fa-user"></i></a></li>
+         <li><a href="dashboard/">Notifications <i class="fa fa-bell"></i> (6)</a></li>
+         <li><a href="dashboard/">Calendar <i class="fa fa-calendar"></i></a></li>
          <!-- <li>
           <form class="search">
             <input class="search" type="text" placeholder="Search..">
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </li> -->
-        <li class="btn-trial"><a href="<?php echo $app_path ?>logoutPages/sign_out.php">Sign Out <i class="fa fa-sign-out"></i></a></li>
-        <li><a href="<?php echo $app_path ?>dashboard/user.php">
+        <li class="btn-trial"><a href="logoutPages/sign_out.php">Sign Out <i class="fa fa-sign-out"></i></a></li>
+        <li><a href="dashboard/user.php">
           <img width=40px style="border-radius: 100%;" src="<?php echo $img;?>">
         </a></li>
       </ul>

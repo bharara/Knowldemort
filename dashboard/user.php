@@ -5,7 +5,8 @@
   include "../includes/config.php";
   include "../includes/header.php";
   include "../includes/dbfun.php";
-  session_start ();
+  if(!isset($_SESSION["sid"]))
+      session_start();
 
   if(isset($_GET["id"])) {
     $id = $_GET["id"];
@@ -61,6 +62,6 @@
   </section>
   <!--/ work-shop-->
 <?php }; ?>
-<?php include $app_path . "includes/footer.php" ?>
+<?php include $app_path . "../includes/footer.php" ?>
 </body>
 </html>

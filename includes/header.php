@@ -5,7 +5,7 @@
 ?>
 <?php
 	if(isset($_SESSION["sid"]))
-		include "$app_path" . "includes/login_menu.php?img=$_SESSION[img]";
+		include  "login_menu.php";
 	else
 		include "$app_path" . "includes/log_out_menu.php";
 ?>

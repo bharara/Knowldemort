@@ -16,6 +16,7 @@
   $is_enrolled = is_enrolled($id);
   $reviews = get_course_reviews($id);
 ?>
+
   <title> <?php echo $course_info["name"];?>  - Knowldemort</title>
 </head>
 <body>

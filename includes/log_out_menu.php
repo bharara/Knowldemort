@@ -17,6 +17,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php?page=contact">Contact</a></li>
         <li><a href="index.php?page=about">About</a></li>
+
         <li><a href="#" data-target="#login" data-toggle="modal">Log-In <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
         <li class="btn-trial"><a href="index.php?page=register"/>Sign-Up <i class="fa fa-user-plus"></i></a></li>
       </ul>

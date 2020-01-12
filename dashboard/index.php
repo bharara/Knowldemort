@@ -187,7 +187,7 @@
 		</div>
 	</div> -->
 
-	<?php include $app_path . "includes/footer.php" ?>
+	<?php include $app_path . "../includes/footer.php" ?>
 	
 </body>
 </html>
