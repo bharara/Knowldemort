@@ -15,7 +15,7 @@ if(!isset($_SESSION["sid"]))
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="">Know<span>ldemort</span></a>
+      <a class="navbar-brand" href="index.php">Know<span>ldemort</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

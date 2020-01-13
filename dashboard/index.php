@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
-          <p class="pm-staff-profile-name">Buzz Night</p>
+          <p class="pm-staff-profile-name"><a href="event.php?event=5">Book Fair</a></p>
           <p class="pm-staff-profile-bio">46 people are going</p>
         </div>
       </div>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
-          <p class="pm-staff-profile-name">Science Bee</p>
+          <p class="pm-staff-profile-name"><a href="event.php?event=4">Food Festival</a></p>
           <p class="pm-staff-profile-bio">410 people including 3 people who are enrolled with you are going</p>
         </div>
       </div>
