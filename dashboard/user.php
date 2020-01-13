@@ -61,7 +61,43 @@
   </div>
   </section>
   <!--/ work-shop-->
+
+
+
 <?php }; ?>
+
+<!--work-shop-->
+<?php
+  $user_events = get_user_events ($id);
+  $numevents = count($user_events);
+
+  if ($numevents > 0) {
+?>
+
+  <section class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Events Attending</h2>
+        <hr class="bottom-line">
+      </div>
+
+      <?php
+      foreach($user_events as $event_info) {
+        // print_r($event_info);
+        $_GLOBALS["event"] = $event_info;
+        include "event_ind.php";
+
+      }?>
+
+    </div>
+  </div>
+  </section>
+  <!--/ work-shop-->
+
+  <?php }; ?>
 <?php include $app_path . "../includes/footer.php" ?>
 </body>
 </html>
+
+

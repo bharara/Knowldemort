@@ -11,7 +11,7 @@
   }
 
   $id = $_GET["event"];
-  //$is_attending = $_GET["isatt"];
+  $is_attending = $_GET["isattend"];
   include "../includes/dbfun.php";
   $event_info = get_event_info ($id);
 
@@ -34,7 +34,14 @@
     Date: $event_info[dates]
     </p>";?>
   </div>
-
+  <div class="col-3">
+    <?php
+      if ($is_attending)
+        echo "<a class='btn btn-green btn-flat' href='leaveevent.php?event=$event_info[id]'>Leave Event</a>";
+      else
+        echo "<a class='btn btn-green btn-flat' href='joinevent.php?event=$event_info[id]'>Join here</a>";
+      ?>
+   </div>
 </div></div>
 
 

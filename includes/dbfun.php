@@ -368,4 +368,36 @@ function get_event_info (int $id) {
 	}
 }
 
+function get_user_events (int $id) {
+	include "dbcode.php";
+	$query = "SELECT * FROM vw_student_events WHERE uid = ?";
+	$stmt = mysqli_prepare($link, $query);
+	mysqli_stmt_bind_param($stmt, "s", $id);
+
+	if (mysqli_stmt_execute($stmt)) {
+		mysqli_stmt_store_result($stmt);
+		mysqli_stmt_bind_result($stmt, $eventid, $eventname, $address,  $organizer, $s);
+
+		$allrevs = array();
+
+		while(mysqli_stmt_fetch($stmt)){
+			$event_info = [
+			"id" => $eventid,
+			"name" => $eventname,
+			"address" => $address,
+
+			"organizer" => $organizer
+		];
+			$allrevs[] = $event_info;
+		}
+
+		return $allrevs;
+	}
+
+	else {
+		// echo "Error";
+		header("location:../index.php");
+	}
+}
+
 ?>
