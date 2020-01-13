@@ -339,4 +339,33 @@ function get_current_agg ($cid, $sid) {
 	}
 }
 
+// event info
+function get_event_info (int $id) {
+	include "dbcode.php";
+	$query = "SELECT eventid, eventname, address, dates, organizer FROM vw_event_display WHERE eventid = ?";
+	$stmt = mysqli_prepare($link, $query);
+	mysqli_stmt_bind_param($stmt, "s", $id);
+
+	if (mysqli_stmt_execute($stmt)) {
+		mysqli_stmt_store_result($stmt);
+		mysqli_stmt_bind_result($stmt, $eventid, $eventname, $address, $dates, $organizer);
+		mysqli_stmt_fetch($stmt);
+
+		$event_info = [
+			"id" => $eventid,
+			"name" => $eventname,
+			"address" => $address,
+			"dates" => $dates,
+			"organizer" => $organizer
+
+		];
+		return $event_info;
+	}
+
+	else {
+		// echo "Error";
+		header("location:../index.php");
+	}
+}
+
 ?>

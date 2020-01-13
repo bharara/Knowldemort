@@ -19,8 +19,9 @@ if(!isset($_SESSION["sid"]))
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="#">Home</a></li>
+         <li><a href="index.php">Home</a></li>
          <li><a href="courselist.php">Course Catalog</a></li>
+         <li><a href="eventlist.php">Upcoming Events</a></li>
          <li><a href="user.php">My Profile <i class="fa fa-user"></i></a></li>
          <li><a href="dashboard/">Notifications <i class="fa fa-bell"></i> (6)</a></li>
          <li><a href="dashboard/">Calendar <i class="fa fa-calendar"></i></a></li>
